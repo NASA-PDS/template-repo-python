@@ -38,11 +38,17 @@ To isolate and be able to re-produce the environment for the project, we use vir
 
     python -m venv venv
     source venv/bin/activate
-    pip install setuptools
+
     
 Dependencies for development are stored in file requirements.txt, they are installed in the virtualenv as follow:
 
     pip install -r requirements.txt
+
+
+Use setup tools to package your code:
+
+    pip install setuptools
+
      
 All the source code is in a sub-directory named after the developed module, for example my_pds_module.
 If the project is complex, we might have different sub-modules in this directory.
@@ -78,6 +84,7 @@ For example:
 ### Tests
 
 Your project should have built-in unit tests and validation tests.
+
 To Be completed
 
 ## Build
@@ -92,7 +99,7 @@ You can publish your module on PyPi (you need a pypi account):
     pip install twine
     twine upload dist/*
     
-You can also use github actions, see example provided 
+You can also use github actions, see example provided in `.github/workflows/publish.yml.example`
 
 
 
