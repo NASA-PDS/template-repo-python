@@ -1,2 +1,100 @@
 # pds-template-python
-template repository for PDS python developments 
+Template repository for PDS python developments.
+
+This repository aims at being a base for new python repository used in PDS.
+
+It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. 
+
+## Prerequisites
+
+Any system wide requirements (brew install, apt-get install or yum install ...)
+
+**Python3** should be used.
+
+
+## User quickstart
+
+Install
+
+    pip install my_pds_module
+
+Configure
+
+Update local configuration files is relevant. Ideally a default configuration should work (see [Configuration](###configuration) for detail).
+
+Use (command line or web service url):
+
+    ...
+
+
+## Developers
+
+**PyCharm** IDE is useful for complex development project.
+
+
+### Packaging
+
+To isolate and be able to re-produce the environment for the project, we use virtualenv:
+
+    python -m venv venv
+    source venv/bin/activate
+    pip install setuptools
+    
+Dependencies for development are stored in file requirements.txt, they are installed in the virtualenv as follow:
+
+    pip install -r requirements.txt
+     
+All the source code is in a sub-directory named after the developed module, for example my_pds_module.
+If the project is complex, we might have different sub-modules in this directory.
+
+Update the setup.py file:
+- name of your module
+- version
+- license, default apache, update if needed
+- description
+- download url, when you release your package on github add the url here
+- keywords
+- classifiers
+- install_requires, add the dependencies of you module
+- entry_points, when your module can be called in command line, this helps to deploy command lines entry points pointing on scripts in your module  
+
+You can update the setup.cfg file which describes how setup.py can be called, with which directives and options. This is useful for pypi publication.
+
+For the packaging details, see https://packaging.python.org/tutorials/packaging-projects/ as a reference.
+
+### Configuration
+
+It is convenient to use ConfigParser package to manage configuration.
+It allows to have a default configuration which can be overwritten by the user in a specific file in their environment.
+See https://pymotw.com/2/ConfigParser/
+
+For example:
+
+    candidates = ['my_pds_module.ini',
+                  'my_pds_module.ini.default']
+    found = parser.read(candidates)
+
+
+### Tests
+
+Your project should have built-in unit tests and validation tests.
+To Be completed
+
+## Build
+
+    pip install wheel
+    python sdist bdist_wheel
+
+### Publication
+
+You can publish your module on PyPi (you need a pypi account):
+
+    pip install twine
+    twine upload dist/*
+    
+You can also use github actions, see example provided 
+
+
+
+
+
