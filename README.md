@@ -80,6 +80,30 @@ For example:
                   'my_pds_module.ini.default']
     found = parser.read(candidates)
 
+### Logs
+
+You should not use `print()`vin the purpose of logging information on the execution of your code. Depending on where the code runs these information could be redirected to specific log files.
+
+To make that work, have a the beginning of your python file:
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+```
+
+To log a message:
+
+    logger.info("my message")
+    
+    
+### Code style
+
+So that your code is readable, you must comply with the PEP8 style guide, see https://www.python.org/dev/peps/pep-0008/
+
+It is automatically enforced in PyCharm IDE.
+
 
 ### Tests
 
