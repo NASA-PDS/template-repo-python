@@ -104,6 +104,20 @@ So that your code is readable, you must comply with the PEP8 style guide, see ht
 
 It is automatically enforced in PyCharm IDE.
 
+### Recommended libraries
+
+Python offers a large variety of libraries. In PDS scope, for the most current usage we should use:
+
+| Library    | Usage |
+|------------|-----------------------------|
+| configparser | manage and parse configuration files |
+| argparse | command line argument documentation and parsing |
+| requests | interact with web APIs |
+| lxml | read/write XML files |
+| json | read/write JSON files |
+| pyyaml | read/write YAML files |
+| pystache | generate files from templates |
+
 
 ### Tests
 
