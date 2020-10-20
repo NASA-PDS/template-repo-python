@@ -121,6 +121,8 @@ Python offers a large variety of libraries. In PDS scope, for the most current u
 
 ### Tests
 
+#### Unit tests
+
 Your project should have built-in unit tests and validation tests.
 
 The package to be used for unit testing is unittest, see https://docs.python.org/3/library/unittest.html
@@ -130,6 +132,12 @@ Tests objects must be in packages 'test' subdirectories or preferably in project
 Unit tests are launched with command:
 
     python setup.py test 
+
+#### Integration/behavioral tests
+
+One shoud use the `behave package` and push the test results to testrail.
+
+See example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing
 
 ## Build
 
