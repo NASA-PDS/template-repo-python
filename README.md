@@ -123,7 +123,13 @@ Python offers a large variety of libraries. In PDS scope, for the most current u
 
 Your project should have built-in unit tests and validation tests.
 
-To Be completed
+The package to be used for unit testing is unittest, see https://docs.python.org/3/library/unittest.html
+
+Tests objects must be in packages 'test' subdirectories or preferably in project 'tests' directory which mirrors the project package structure.
+
+Unit tests are launched with command:
+
+    python setup.py test 
 
 ## Build
 
