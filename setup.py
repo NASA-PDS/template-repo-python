@@ -1,15 +1,17 @@
-import setuptools
+# -*- coding: utf-8 -*-
+
+import setuptools, versioneer
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="my_pds_module",  # Replace with your own username
-    version="0.0.1",
+    name="my_pds_module",  # Replace with your own package name
+    version=versioneer.get_version(),
     license="apache-2.0",
     author="pds ",
     author_email="pds_operator@jpl.nasa.gov",
-    description="short description of my pds module, less than 100-120 characters",
+    description="short description of my pds module, less than 100–120 characters",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NASA-PDS/pds-template-python",
@@ -26,6 +28,11 @@ setuptools.setup(
     install_requires=[],
     entry_points={
         'console_scripts': ['snapshot-release=pds_github_util:snapshot_release.main'],
-    }
-
+    },
+    cmdclass=versioneer.get_cmdclass()
 )
+
+
+# For future consideration:
+#
+# - `setup.py` metadata passé; move to `setup.cfg`

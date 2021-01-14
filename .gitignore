@@ -3,6 +3,8 @@ __pycache__/
 dist/
 build/
 .idea/
+*.sublime-workspace
+*.egg-info
 
 # Object files
 *.o
