@@ -1,0 +1,10 @@
+include versioneer.py
+include my_pds_module/_version.py
+
+# Include package-level files and directories here; e.g.:
+#
+# include *.png *.jpeg
+# exclude *.webp
+# graft spice-kernels
+# prune my_pds_module/obsolete-dir
+# global-exclude *.py[cod]
