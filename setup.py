@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="my_pds_module", # Replace with your own username
+    name="my_pds_module",  # Replace with your own username
     version="0.0.1",
     license="apache-2.0",
     author="pds ",
@@ -13,7 +13,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/NASA-PDS/pds-template-python",
-    download_url = "https://github.com/NASA-PDS/pds-template-python/releases/download/....",
+    download_url="https://github.com/NASA-PDS/pds-template-python/releases/download/....",
     packages=setuptools.find_packages(),
     keywords=['pds', 'other keywords'],
 
