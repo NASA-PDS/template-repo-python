@@ -5,6 +5,10 @@ import setuptools, versioneer
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open('requirements.txt', 'r') as f:
+    pip_requirements = f.readlines()
+
+    
 setuptools.setup(
     name="my_pds_module",  # Replace with your own package name
     version=versioneer.get_version(),
@@ -25,7 +29,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
-    install_requires=[],
+    install_requires=pip_requirements,
     entry_points={
         'console_scripts': ['snapshot-release=pds_github_util:snapshot_release.main'],
     },
