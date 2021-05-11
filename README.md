@@ -2,9 +2,7 @@
 
 This is the template repository for PDS's Python projects.
 
-This repository aims at being a base for new python repository used in PDS. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
-
-It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance.
+This repository aims at being a base for new python repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
 
 
 ## Prerequisites
@@ -18,14 +16,14 @@ Install with:
 
     pip install my_pds_module
 
-If possible, make a default configuration work out of the box, but see the [Configuration](###configuration) section for details.
+If possible, make it so that your program works out of the box without any additional configuration—but see the [Configuration](###configuration) section for details.
 
 To execute, run:
 
     (put your run commands here)
 
 
-## Developmemt
+## Development
 
 To develop this project, use your favorite text editor, or an integrated development environment with Python support, such as [PyCharm](https://www.jetbrains.com/pycharm/).
 
@@ -38,13 +36,13 @@ To isolate and be able to re-produce the environment for this package, you shoul
 
 Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc. (It is no longer recommended to use `venv/bin/activate`.)
 
-Dependencies for development are stored in file `requirements.txt`; they are installed into the virtual environment as follow:
+Dependencies for development are stored in requirements.txt; they are installed into the virtual environment as follows:
 
     venv/bin/pip install --requirement requirements.txt
      
 All the source code is in a sub-directory under `src`.
 
-You should update the `setup.py` file:
+You should update the `setup.py` file with:
 
 - name of your module
 - version
@@ -63,7 +61,7 @@ For the packaging details, see https://packaging.python.org/tutorials/packaging-
 
 ### Configuration
 
-It is convenient to use ConfigParser package to manage configuration. It allows to have a default configuration which can be overwritten by the user in a specific file in their environment. See https://pymotw.com/2/ConfigParser/
+It is convenient to use ConfigParser package to manage configuration. It allows a default configuration which can be overwritten by the user in a specific file in their environment. See https://pymotw.com/2/ConfigParser/
 
 For example:
 
@@ -75,7 +73,7 @@ For example:
 
 You should not use `print()`vin the purpose of logging information on the execution of your code. Depending on where the code runs these information could be redirected to specific log files.
 
-To make that work, have a the beginning of each Python file:
+To make that work, start each Python file with:
 
 ```python
 import logging
