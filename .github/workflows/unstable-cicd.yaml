@@ -2,7 +2,7 @@
 # =================================================
 #
 # Note: for this workflow to succeed, the following secrets must be installed
-# in the repository:
+# in the repository (or inherited from the repository's organization):
 #
 # ``ADMIN_GITHUB_TOKEN``
 #     A personal access token of a user with collaborator or better access to
@@ -51,7 +51,7 @@ jobs:
                     lfs: true
             -
                 name: 🤠 Roundup
-                uses: NASA-PDS/roundup-action@master
+                uses: NASA-PDS/roundup-action@dev
                 with:
                     assembly: unstable
                 env:

@@ -1,15 +1,23 @@
+# Python build, virtual environments, and buildouts
 venv
 __pycache__/
 dist/
 build/
-.idea/
-*.sublime-workspace
 *.egg-info
+.*.cfg
+develop-eggs/
+.python-eggs/
+.eggs/
+pip-selfcheck.json
+
+# Python testing artifacts
+.coverage
+htmlcov
 
 # Object files
 *.o
 *.pkl
-*.pyc
+*.py[ocd]
 
 # Libraries
 *.lib
@@ -20,15 +28,20 @@ build/
 *.project
 *.classpath
 
-# IntelliJ files
+# Editor support
 .idea/
 *.iml
+.vscode
+*.sublime-*
+
 
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
 *.so.*
 *.dylib
+lib/
+lib64/
 
 # Executables
 *.exe
@@ -37,10 +50,22 @@ build/
 
 # Temporary files
 *~
+.*.swp
+var/
 
 # other stuff
+*.log
 *.xpr
-*.swp
-/bin/
+bin/
 .*.swp
-*.sublime-*
+
+# OS-specific artifacts
+.DS_Store
+._*
+
+# Exclusions
+!.coveragerc
+!.editorconfig
+!.gitattributes
+!.gitignore
+!.gitkeep

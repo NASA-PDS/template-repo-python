@@ -1,59 +1,51 @@
-# pds-template-python
-Template repository for PDS python developments.
+# pds-template-repo-python
 
-This repository aims at being a base for new python repository used in PDS.
+This is the template repository for PDS's Python projects.
 
-It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. 
+This repository aims at being a base for new python repository used in PDS. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
+
+It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance.
+
 
 ## Prerequisites
 
-Any system wide requirements (brew install, apt-get install or yum install ...)
-
-**Python3** should be used.
+Include any system-wide requirements (`brew install`, `apt-get install`, `yum install`, …) **Python 3** should be used regardless as [Python 2 reached end-of-life on January 1st, 2020](https://pythonclock.org/).
 
 
-## User quickstart
+## User Quickstart
 
-Install
+Install with:
 
     pip install my_pds_module
 
-Configure
+If possible, make a default configuration work out of the box, but see the [Configuration](###configuration) section for details.
 
-Update local configuration files is relevant. Ideally a default configuration should work (see [Configuration](###configuration) for detail).
+To execute, run:
 
-Use (command line or web service url):
-
-    ...
+    (put your run commands here)
 
 
-## Developers
+## Developmemt
 
-**PyCharm** IDE is useful for complex development project.
+To develop this project, use your favorite text editor, or an integrated development environment with Python support, such as [PyCharm](https://www.jetbrains.com/pycharm/).
 
 
 ### Packaging
 
-To isolate and be able to re-produce the environment for the project, we use virtualenv:
+To isolate and be able to re-produce the environment for this package, you should use a [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html). To do so, run:
 
     python -m venv venv
-    source venv/bin/activate
 
-    
-Dependencies for development are stored in file requirements.txt, they are installed in the virtualenv as follow:
+Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc. (It is no longer recommended to use `venv/bin/activate`.)
 
-    pip install -r requirements.txt
+Dependencies for development are stored in file `requirements.txt`; they are installed into the virtual environment as follow:
 
-
-Use setup tools to package your code:
-
-    pip install setuptools
-
+    venv/bin/pip install --requirement requirements.txt
      
-All the source code is in a sub-directory named after the developed module, for example my_pds_module.
-If the project is complex, we might have different sub-modules in this directory.
+All the source code is in a sub-directory under `src`.
 
-Update the setup.py file:
+You should update the `setup.py` file:
+
 - name of your module
 - version
 - license, default apache, update if needed
@@ -64,96 +56,99 @@ Update the setup.py file:
 - install_requires, add the dependencies of you module
 - entry_points, when your module can be called in command line, this helps to deploy command lines entry points pointing on scripts in your module  
 
-You can update the setup.cfg file which describes how setup.py can be called, with which directives and options. This is useful for pypi publication.
+Eventually, we should move to putting everything into `setup.cfg`, as having package metadata in `setup.py` is passé.
 
 For the packaging details, see https://packaging.python.org/tutorials/packaging-projects/ as a reference.
 
+
 ### Configuration
 
-It is convenient to use ConfigParser package to manage configuration.
-It allows to have a default configuration which can be overwritten by the user in a specific file in their environment.
-See https://pymotw.com/2/ConfigParser/
+It is convenient to use ConfigParser package to manage configuration. It allows to have a default configuration which can be overwritten by the user in a specific file in their environment. See https://pymotw.com/2/ConfigParser/
 
 For example:
 
-    candidates = ['my_pds_module.ini',
-                  'my_pds_module.ini.default']
+    candidates = ['my_pds_module.ini', 'my_pds_module.ini.default']
     found = parser.read(candidates)
+
 
 ### Logs
 
 You should not use `print()`vin the purpose of logging information on the execution of your code. Depending on where the code runs these information could be redirected to specific log files.
 
-To make that work, have a the beginning of your python file:
+To make that work, have a the beginning of each Python file:
 
 ```python
 import logging
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 ```
 
 To log a message:
 
     logger.info("my message")
+
+In your `main` routine, include:
+
+    logging.basicConfig(level=logging.INFO)
+
+to get a basic logging system configured.
     
     
-### Code style
+### Code Style
 
-So that your code is readable, you must comply with the PEP8 style guide, see https://www.python.org/dev/peps/pep-0008/
+So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). It is automatically enforced in PyCharm IDE.
 
-It is automatically enforced in PyCharm IDE.
+Note that several PEP8 guidelines are rather old fashioned; trust your judgment.
 
-### Recommended libraries
+
+### Recommended Libraries
 
 Python offers a large variety of libraries. In PDS scope, for the most current usage we should use:
 
-| Library    | Usage |
-|------------|-----------------------------|
-| configparser | manage and parse configuration files |
-| argparse | command line argument documentation and parsing |
-| requests | interact with web APIs |
-| lxml | read/write XML files |
-| json | read/write JSON files |
-| pyyaml | read/write YAML files |
-| pystache | generate files from templates |
+| Library      | Usage                                           |
+|--------------|------------------------------------------------ |
+| configparser | manage and parse configuration files            |
+| argparse     | command line argument documentation and parsing |
+| requests     | interact with web APIs                          |
+| lxml         | read/write XML files                            |
+| json         | read/write JSON files                           |
+| pyyaml       | read/write YAML files                           |
+| pystache     | generate files from templates                   |
+
+Some of these are built into Python 3; others are open source add-ons you can include in your `requirements.txt`.
 
 
 ### Tests
 
+This section describes testing for your package.
+
+
 #### Unit tests
 
-Your project should have built-in unit tests and validation tests.
+Your project should have built-in unit tests, functional, validation, acceptance, etc., tests.
 
-The package to be used for unit testing is unittest, see https://docs.python.org/3/library/unittest.html
+For unit testing, check out the [unittest](https://docs.python.org/3/library/unittest.html) module, built into Python 3.
 
-Tests objects must be in packages 'test' subdirectories or preferably in project 'tests' directory which mirrors the project package structure.
+Tests objects should be in packages `test` modules or preferably in project 'tests' directory which mirrors the project package structure.
 
 Unit tests are launched with command:
 
     python setup.py test 
 
-#### Integration/behavioral tests
 
-One shoud use the `behave package` and push the test results to testrail.
+#### Integration/Behavioral Tests
 
-See example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing
+One should use the `behave package` and push the test results to "testrail".
+
+See an example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing-for-integration--testing
+
 
 ## Build
 
     pip install wheel
-    python sdist bdist_wheel
+    python setup.py sdist bdist_wheel
+
 
 ### Publication
 
-You can publish your module on PyPi (you need a pypi account):
-
-    pip install twine
-    twine upload dist/*
-    
-You can also use github actions, see example provided in `.github/workflows/publish.yml.example`
-
-
-
-
-
+NASA PDS packages can publish automatically using the [Roundup Action](https://github.com/NASA-PDS/roundup-action), which leverages GitHub Actions to perform automated continuous integration and continuous delivery. A default workflow that includes the Roundup is provided in the `.github/workflows/unstable-cicd.yaml` file. (Unstable here means an interim release.)
