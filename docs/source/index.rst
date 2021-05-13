@@ -1,9 +1,8 @@
 Overview
 ========
 
-Welcome to you PDS template site! Have Fun!
+Welcome to your PDS template package! Have Fun!
 
---------------
 
 
 Sitemap

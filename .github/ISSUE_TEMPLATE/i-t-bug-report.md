@@ -7,19 +7,26 @@ assignees: jordanpadams
 
 ---
 
-**Describe the bug**
+## Describe the bug
+
 A clear and concise description of what the bug is.
 
-**Expected behavior**
+
+## Expected behavior
+
 A clear and concise description of what you expected to happen.
 
-**Test Data**
+
+## Test Data
+
 Attach test data here
 
-**Related Test Case(s)**
+## Related Test Case(s)
+
 Document related test cases here
 
-**Related issues**
+## Related issues
+
 Reference relates issues here, e.g.
 * for issues in this repo: `#1` (remove back ticks)
 * for issues in other repos: NASA-PDS/my_repo#1, NASA-PDS/her_repo#2
