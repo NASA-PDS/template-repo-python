@@ -22,6 +22,8 @@ jobs:
                 name: 🔎 💢
                 run: |
                     ls -laF
+                    git tag --list
+                    git branch --list
                     git describe --tags
 
 ...
