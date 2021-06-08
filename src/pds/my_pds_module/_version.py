@@ -42,8 +42,8 @@ def get_config():
     cfg.VCS = "git"
     cfg.style = "git-describe"
     cfg.tag_prefix = "v"
-    cfg.parentdir_prefix = "my_pds_module-"
-    cfg.versionfile_source = "my_pds_module/_version.py"
+    cfg.parentdir_prefix = "pds.my_pds_module-"
+    cfg.versionfile_source = "src/pds/my_pds_module/_version.py"
     cfg.verbose = False
     return cfg
 
