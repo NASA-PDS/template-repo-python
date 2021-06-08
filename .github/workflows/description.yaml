@@ -21,7 +21,7 @@ jobs:
             -
                 name: 🔎 💢
                 run: |
-                    ls -lF
+                    ls -laF
                     git describe --tags
 
 ...
