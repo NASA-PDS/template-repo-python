@@ -18,6 +18,7 @@ jobs:
                 with:
                     lfs: true
                     token: ${{secrets.ADMIN_GITHUB_TOKEN}}
+                    fetch-depth: 0
             -
                 name: 🔎 💢
                 run: |
