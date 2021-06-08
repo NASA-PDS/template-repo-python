@@ -9,7 +9,7 @@ on:
 
 jobs:
     description:
-        name: 🧩 Description
+        name: 📣 Description
         runs-on: ubuntu-latest
         steps:
             -
@@ -19,8 +19,9 @@ jobs:
                     lfs: true
                     token: ${{secrets.ADMIN_GITHUB_TOKEN}}
             -
-                name: 🔎 Roundup
+                name: 🔎 💢
                 run: |
+                    ls -lF
                     git describe --tags
 
 ...
