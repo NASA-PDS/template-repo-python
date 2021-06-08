@@ -9,7 +9,7 @@ import setuptools, versioneer
 # Replace values below with what's appropriate for your package:
 
 name               = 'pds.template.package'
-description        = 'A short description, about 100–120 characters, suitable for web search summaries'
+description        = 'A short description, about 100–120 characters, suitable for search summaries'
 keywords           = ['pds', 'planetary data', 'various', 'other', 'keywords']
 zip_safe           = True
 namespace_packages = ['pds']
