@@ -43,10 +43,10 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/NASA-PDS/' + name,
-    download_url='https://github.com/NASA-PDS/' + name + '/releases/download/…',
+    download_url='https://github.com/NASA-PDS/' + name + '/releases/',
     packages=setuptools.find_packages('src'),
     include_package_data=True,
-    zip_safe=zip_safe,  # Change this if you need
+    zip_safe=zip_safe,
     namespace_packages=namespace_packages,
     package_dir={'': 'src'},
     keywords=keywords,
