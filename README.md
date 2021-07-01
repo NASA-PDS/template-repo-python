@@ -4,6 +4,12 @@ This is the template repository for PDS's Python projects.
 
 This repository aims at being a base for new python repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
 
+## Getting Started With This Template
+
+See our wiki page for more info on setting up your new repo. You can remove this section once you have completed the necessary start-up steps.
+
+https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#creating-a-new-repo
+
 
 ## Prerequisites
 
