@@ -4,7 +4,7 @@ This is the template repository for PDS's Python projects.
 
 This repository aims at being a base for new python repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
 
-## Getting Started With This Template
+## 🏃 Getting Started With This Template
 
 See our wiki page for more info on setting up your new repo. You can remove this section once you have completed the necessary start-up steps.
 
@@ -152,7 +152,24 @@ See an example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing
     pip install wheel
     python setup.py sdist bdist_wheel
 
-
-### Publication
+## Publication
 
 NASA PDS packages can publish automatically using the [Roundup Action](https://github.com/NASA-PDS/roundup-action), which leverages GitHub Actions to perform automated continuous integration and continuous delivery. A default workflow that includes the Roundup is provided in the `.github/workflows/unstable-cicd.yaml` file. (Unstable here means an interim release.)
+
+### Manual Publication
+
+Create the package:
+
+    python setup.py sdist
+
+Publish it as a Github release.
+
+Publish on pypi (you need a pypi account and configure `$HOME/.pypirc`):
+
+    pip install twine
+    twine upload dist/*
+    
+Or publish on testpypi (you need a testpypi account and configure `$HOME/.pypirc`):
+
+    pip install twine
+    twine upload --repository testpypi dist/*
