@@ -57,7 +57,7 @@ jobs:
                     fetch-depth: 0
             -
                 name: 🤠 Roundup
-                uses: NASA-PDS/roundup-action@main
+                uses: NASA-PDS/roundup-action@dev
                 with:
                     assembly: unstable
                 env:
