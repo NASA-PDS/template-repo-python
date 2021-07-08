@@ -1,13 +1,5 @@
 # Changelog
 
-## [v1.0.0+38.gd5e27c7.2.g5424a75.2.g080e49b](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+38.gd5e27c7.2.g5424a75.2.g080e49b) (2021-07-07)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+38.gd5e27c7.2.g5424a75...v1.0.0+38.gd5e27c7.2.g5424a75.2.g080e49b)
-
-## [v1.0.0+38.gd5e27c7.2.g5424a75](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+38.gd5e27c7.2.g5424a75) (2021-07-07)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+38.gd5e27c7...v1.0.0+38.gd5e27c7.2.g5424a75)
-
 ## [v1.0.0+38.gd5e27c7](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+38.gd5e27c7) (2021-07-07)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+38.gd5e27c7)
