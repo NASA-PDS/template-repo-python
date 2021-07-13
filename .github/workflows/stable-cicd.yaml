@@ -26,13 +26,13 @@ name: 😌 Stable integration & delivery
 # -------------
 #
 # What event starts this workflow: a push of a stable tag. Note: according to
-# https://git.io/JTLTf we have been doing our tag matching wrong. It's not
+# https://git.io/JJZQt we have been doing our tag matching wrong. It's not
 # regexp, it's not glob…it's more like…glob++ 😮
 
 on:
     push:
-        tags:
-            -  'v[0-9]+.[0-9]+.[0-9]+'
+        branch:
+            -  'release/*'
 
 
 # What to Do

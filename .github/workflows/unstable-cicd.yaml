@@ -26,7 +26,7 @@ name: 🤪 Unstable integration & delivery
 # -------------
 #
 # What event starts this workflow: a push to ``main`` (or ``master`` in old
-# parlance).
+# parlance). For the "glob++" pattern syntax, see https://git.io/JJZQt
 
 on:
     push:
@@ -57,7 +57,7 @@ jobs:
                     fetch-depth: 0
             -
                 name: 🤠 Roundup
-                uses: NASA-PDS/roundup-action@dev
+                uses: NASA-PDS/roundup-action@main
                 with:
                     assembly: unstable
                 env:
