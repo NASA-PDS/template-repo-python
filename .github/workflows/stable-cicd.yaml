@@ -25,14 +25,14 @@ name: 😌 Stable integration & delivery
 # Driving Event
 # -------------
 #
-# What event starts this workflow: a push of a stable tag. Note: according to
+# What event starts this workflow: a push of a release tag. Note: according to
 # https://git.io/JJZQt we have been doing our tag matching wrong. It's not
 # regexp, it's not glob…it's more like…glob++ 😮
 
 on:
     push:
         branch:
-            -  'release/*'
+            - 'release/*'
 
 
 # What to Do
@@ -54,7 +54,7 @@ jobs:
                     fetch-depth: 0
             -
                 name: 🤠 Roundup
-                uses: NASA-PDS/roundup-action@master
+                uses: NASA-PDS/roundup-action@main
                 with:
                     assembly: stable
                 env:
