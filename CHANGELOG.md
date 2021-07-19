@@ -1,5 +1,17 @@
 # Changelog
 
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-07-19)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b.2.gd59698f...«unknown»)
+
+**Defects:**
+
+- Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/pds-template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/pds-template-repo-python/labels/s.medium)]
+
+## [v1.0.0+48.ga2dbe7b.2.gd59698f](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f) (2021-07-08)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b...v1.0.0+48.ga2dbe7b.2.gd59698f)
+
 ## [v1.0.0+48.ga2dbe7b](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b) (2021-07-08)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+48.ga2dbe7b)
