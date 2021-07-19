@@ -32,7 +32,7 @@ name: 😌 Stable integration & delivery
 on:
     push:
         branches:
-            - 'release/**'
+            - 'release/*'
 
 
 # What to Do
