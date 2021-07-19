@@ -31,8 +31,8 @@ name: 😌 Stable integration & delivery
 
 on:
     push:
-        branch:
-            - 'release/*'
+        branches:
+            - 'release/**'
 
 
 # What to Do
