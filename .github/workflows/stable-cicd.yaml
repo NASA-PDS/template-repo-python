@@ -31,7 +31,7 @@ name: 😌 Stable integration & delivery
 
 on:
     push:
-        branch:
+        branches:
             - 'release/*'
 
 
