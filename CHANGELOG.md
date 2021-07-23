@@ -1,20 +1,20 @@
 # Changelog
 
-## [v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11) (2021-07-19)
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-07-23)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b.2.gd59698f...v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b...«unknown»)
+
+**Requirements:**
+
+- As a developer, I want to know how to generate the Sphinx documentation [\#7](https://github.com/NASA-PDS/pds-template-repo-python/issues/7)
+
+## [v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b) (2021-07-21)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b)
 
 **Defects:**
 
 - Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/pds-template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/pds-template-repo-python/labels/s.medium)]
-
-## [v1.0.0+48.ga2dbe7b.2.gd59698f](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f) (2021-07-08)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b...v1.0.0+48.ga2dbe7b.2.gd59698f)
-
-## [v1.0.0+48.ga2dbe7b](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b) (2021-07-08)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+48.ga2dbe7b)
 
 ## [v1.0.0](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0) (2021-06-08)
 
