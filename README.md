@@ -147,6 +147,17 @@ One should use the `behave package` and push the test results to "testrail".
 See an example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing-for-integration--testing
 
 
+### Documentation
+
+Your project should use [Sphinx](https://www.sphinx-doc.org/en/master/) to build its documentation. PDS' documentation template is already configured as part of the default build. You can build your projects docs with:
+
+    python setup.py build_sphinx
+
+You can access the build files in the following directory relative to the project root:
+
+    build/sphinx/html/
+
+
 ## Build
 
     pip install wheel
