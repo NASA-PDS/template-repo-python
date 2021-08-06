@@ -139,8 +139,11 @@ Tests objects should be in packages `test` modules or preferably in project 'tes
 
 Unit tests are launched with command:
 
-    python setup.py test 
+    pytest
 
+If you want your tests to run automatically as you make changes start up pytest in watch mode with:
+
+    ptw
 
 #### Integration/Behavioral Tests
 
