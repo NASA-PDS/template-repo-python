@@ -33,7 +33,6 @@ To execute, run:
 
 To develop this project, use your favorite text editor, or an integrated development environment with Python support, such as [PyCharm](https://www.jetbrains.com/pycharm/).
 
-
 ### Packaging
 
 To isolate and be able to re-produce the environment for this package, you should use a [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html). To do so, run:
@@ -48,19 +47,17 @@ Dependencies for development are stored in requirements.txt; they are installed 
      
 All the source code is in a sub-directory under `src`.
 
-You should update the `setup.py` file with:
+You should update the `setup.cfg` file with:
 
 - name of your module
-- version
 - license, default apache, update if needed
 - description
 - download url, when you release your package on github add the url here
 - keywords
 - classifiers
-- install_requires, add the dependencies of you module
-- entry_points, when your module can be called in command line, this helps to deploy command lines entry points pointing on scripts in your module  
-
-Eventually, we should move to putting everything into `setup.cfg`, as having package metadata in `setup.py` is passé.
+- install_requires, add the dependencies of you package
+- extras_require, add the development Dependencies of your package
+- entry_points, when your package can be called in command line, this helps to deploy command lines entry points pointing to scripts in your package  
 
 For the packaging details, see https://packaging.python.org/tutorials/packaging-projects/ as a reference.
 
@@ -96,13 +93,18 @@ In your `main` routine, include:
     logging.basicConfig(level=logging.INFO)
 
 to get a basic logging system configured.
-    
+
+### Tooling
+
+The `dev` `extras_require` included in the template repo installs `black`, `flake8` (plus some plugins), and `mypy` along with default configuration for all of them. Run these against your code with the following:
+
+    black src
+    flake8 src
+    mypy src
     
 ### Code Style
 
-So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). It is automatically enforced in PyCharm IDE.
-
-Note that several PEP8 guidelines are rather old fashioned; trust your judgment.
+So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). Our code style is automatically enforced in via [black](https://pypi.org/project/black/). See the [Tooling section](#-tooling)
 
 
 ### Recommended Libraries
