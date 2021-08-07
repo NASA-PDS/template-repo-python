@@ -37,7 +37,7 @@ To develop this project, use your favorite text editor, or an integrated develop
 
 Install in editable mode and with extra developer dependencies:
 
-    pip install -e .[dev]
+    pip install --editable .[dev]
 
 Configure the `pre-commit` hooks:
 
