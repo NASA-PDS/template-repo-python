@@ -9,10 +9,12 @@ develop-eggs/
 .python-eggs/
 .eggs/
 pip-selfcheck.json
+.python-version
 
 # Python testing artifacts
 .coverage
 htmlcov
+.tox/
 
 # Object files
 *.o

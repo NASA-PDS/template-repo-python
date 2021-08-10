@@ -54,7 +54,7 @@ Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc. (It is no longer re
 Dependencies for development are stored in requirements.txt; they are installed into the virtual environment as follows:
 
     venv/bin/pip install --requirement requirements.txt
-     
+
 All the source code is in a sub-directory under `src`.
 
 You should update the `setup.cfg` file with:
@@ -67,7 +67,7 @@ You should update the `setup.cfg` file with:
 - classifiers
 - install_requires, add the dependencies of you package
 - extras_require, add the development Dependencies of your package
-- entry_points, when your package can be called in command line, this helps to deploy command lines entry points pointing to scripts in your package  
+- entry_points, when your package can be called in command line, this helps to deploy command lines entry points pointing to scripts in your package
 
 For the packaging details, see https://packaging.python.org/tutorials/packaging-projects/ as a reference.
 
@@ -111,7 +111,7 @@ The `dev` `extras_require` included in the template repo installs `black`, `flak
     black src
     flake8 src
     mypy src
-    
+
 ### Code Style
 
 So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). Our code style is automatically enforced in via [black](https://pypi.org/project/black/). See the [Tooling section](#-tooling)
@@ -194,7 +194,7 @@ Publish on pypi (you need a pypi account and configure `$HOME/.pypirc`):
 
     pip install twine
     twine upload dist/*
-    
+
 Or publish on testpypi (you need a testpypi account and configure `$HOME/.pypirc`):
 
     pip install twine

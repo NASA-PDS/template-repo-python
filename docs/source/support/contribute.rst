@@ -17,5 +17,3 @@ Report a Bug
 ============
 
 To report a bug found in either a software tool or services, report in the individual repo for the project, or in our `Engineering Node Operations repo <https://github.com/NASA-PDS/pdsen-operations/issues>`_ and we will triage it appropriately.
-
-

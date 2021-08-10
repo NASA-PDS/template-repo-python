@@ -10,4 +10,3 @@ global-exclude *.py[cod]
 # graft spice-kernels
 # prune src/my_pds_module/obsolete-dir
 # global-exclude *.log *.so
-
