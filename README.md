@@ -33,6 +33,16 @@ To execute, run:
 
 To develop this project, use your favorite text editor, or an integrated development environment with Python support, such as [PyCharm](https://www.jetbrains.com/pycharm/).
 
+### Installation
+
+Install in editable mode and with extra developer dependencies:
+
+    pip install --editable .[dev]
+
+Configure the `pre-commit` hooks:
+
+    pre-commit install && pre-commit install -t pre-push
+
 ### Packaging
 
 To isolate and be able to re-produce the environment for this package, you should use a [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html). To do so, run:
