@@ -37,7 +37,7 @@ To develop this project, use your favorite text editor, or an integrated develop
 
 Install in editable mode and with extra developer dependencies into your virtual environment of choice:
 
-    pip install --editable .[dev]
+    pip install --editable '.[dev]'
 
 Configure the `pre-commit` hooks:
 
@@ -55,9 +55,9 @@ If you have `tox` installed and would like it to create your environment and ins
 
     tox --devenv <name you'd like for env> -e dev
 
-Dependencies for development are specified as the `dev` `extras_requier` in `setup.cfg`; they are installed into the virtual environment as follows:
+Dependencies for development are specified as the `dev` `extras_require` in `setup.cfg`; they are installed into the virtual environment as follows:
 
-    pip install --editable .[dev]
+    pip install --editable '.[dev]'
 
 All the source code is in a sub-directory under `src`.
 
