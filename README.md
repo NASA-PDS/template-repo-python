@@ -35,9 +35,9 @@ To develop this project, use your favorite text editor, or an integrated develop
 
 ### Installation
 
-Install in editable mode and with extra developer dependencies:
+Install in editable mode and with extra developer dependencies into your virtual environment of choice:
 
-    pip install --editable .[dev]
+    pip install --editable '.[dev]'
 
 Configure the `pre-commit` hooks:
 
@@ -51,10 +51,14 @@ To isolate and be able to re-produce the environment for this package, you shoul
 
 Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc. (It is no longer recommended to use `venv/bin/activate`.)
 
-Dependencies for development are stored in requirements.txt; they are installed into the virtual environment as follows:
+If you have `tox` installed and would like it to create your environment and install dependencies for you run:
 
-    venv/bin/pip install --requirement requirements.txt
-     
+    tox --devenv <name you'd like for env> -e dev
+
+Dependencies for development are specified as the `dev` `extras_require` in `setup.cfg`; they are installed into the virtual environment as follows:
+
+    pip install --editable '.[dev]'
+
 All the source code is in a sub-directory under `src`.
 
 You should update the `setup.cfg` file with:
@@ -67,7 +71,7 @@ You should update the `setup.cfg` file with:
 - classifiers
 - install_requires, add the dependencies of you package
 - extras_require, add the development Dependencies of your package
-- entry_points, when your package can be called in command line, this helps to deploy command lines entry points pointing to scripts in your package  
+- entry_points, when your package can be called in command line, this helps to deploy command lines entry points pointing to scripts in your package
 
 For the packaging details, see https://packaging.python.org/tutorials/packaging-projects/ as a reference.
 
@@ -106,12 +110,10 @@ to get a basic logging system configured.
 
 ### Tooling
 
-The `dev` `extras_require` included in the template repo installs `black`, `flake8` (plus some plugins), and `mypy` along with default configuration for all of them. Run these against your code with the following:
+The `dev` `extras_require` included in the template repo installs `black`, `flake8` (plus some plugins), and `mypy` along with default configuration for all of them. You can run all of these (and more!) with:
 
-    black src
-    flake8 src
-    mypy src
-    
+    tox -e lint
+
 ### Code Style
 
 So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). Our code style is automatically enforced in via [black](https://pypi.org/project/black/). See the [Tooling section](#-tooling)
@@ -138,6 +140,9 @@ Some of these are built into Python 3; others are open source add-ons you can in
 
 This section describes testing for your package.
 
+A complete "build" including test execution, linting (`mypy`, `black`, `flake8`, etc.), and documentation build is executed via:
+
+    tox
 
 #### Unit tests
 
@@ -147,11 +152,11 @@ For unit testing, check out the [unittest](https://docs.python.org/3/library/uni
 
 Tests objects should be in packages `test` modules or preferably in project 'tests' directory which mirrors the project package structure.
 
-Unit tests are launched with command:
+Our unit tests are launched with command:
 
     pytest
 
-If you want your tests to run automatically as you make changes start up pytest in watch mode with:
+If you want your tests to run automatically as you make changes start up `pytest` in watch mode with:
 
     ptw
 
@@ -194,7 +199,7 @@ Publish on pypi (you need a pypi account and configure `$HOME/.pypirc`):
 
     pip install twine
     twine upload dist/*
-    
+
 Or publish on testpypi (you need a testpypi account and configure `$HOME/.pypirc`):
 
     pip install twine

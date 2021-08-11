@@ -15,5 +15,3 @@ Sitemap
     :caption: Support
 
     /support/*
-
-

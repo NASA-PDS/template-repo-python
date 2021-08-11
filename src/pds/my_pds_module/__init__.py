@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-
 """My PDS Module."""
-
 from ._version import get_versions
 
 __version__ = get_versions()["version"]

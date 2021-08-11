@@ -27,6 +27,6 @@ assignees: jordanpadams
 
 ## ⚙️ Engineering Details
 <!--
-    Provide some design / implementation details and/or a sub-task checklist as needed. 
+    Provide some design / implementation details and/or a sub-task checklist as needed.
     Convert issue to Epic if estimate is outside the scope of 1 sprint.
 -->
