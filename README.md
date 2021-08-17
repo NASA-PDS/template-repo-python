@@ -10,6 +10,14 @@ See our wiki page for more info on setting up your new repo. You can remove this
 
 https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#creating-a-new-repo
 
+**👉 Important!** You must assign the teams as mentioned on the wiki page above! At a minimum, these are:
+
+| Team                                | Permission |
+| ----------------------------------- | ---------- |
+| `@NASA-PDS/pds-software-committers` | `write`    |
+| `@NASA-PDS/pds-software-pmc`        | `admin`    |
+| `@NASA-PDS/pds-operations`          | `admin`    |
+
 
 ## Prerequisites
 
