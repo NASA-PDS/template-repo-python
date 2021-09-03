@@ -1,20 +1,33 @@
 # Changelog
 
-## [v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b.6.g6fc7bf0](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b.6.g6fc7bf0) (2021-07-23)
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-03)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b...v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b.6.g6fc7bf0)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...«unknown»)
 
 **Requirements:**
 
+- As a developer I want to baseline on acceptable Python versions [\#28](https://github.com/NASA-PDS/pds-template-repo-python/issues/28)
 - As a developer, I want to know how to generate the Sphinx documentation [\#7](https://github.com/NASA-PDS/pds-template-repo-python/issues/7)
 
-## [v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b) (2021-07-21)
+**Improvements:**
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+48.ga2dbe7b.2.gd59698f.4.ge20cd11.2.g7f71a0b)
+- Add README sections referencing Community Health Files [\#36](https://github.com/NASA-PDS/pds-template-repo-python/issues/36)
+- As a developer I want to add default tox configuration [\#29](https://github.com/NASA-PDS/pds-template-repo-python/issues/29)
+- As a developer I want a powerful testing library included in our template repo [\#25](https://github.com/NASA-PDS/pds-template-repo-python/issues/25)
+- As a developer I want hooks to enforce code quality checks, formatter execution, and unit tests [\#22](https://github.com/NASA-PDS/pds-template-repo-python/issues/22)
+- As a developer I want a consistent use of requirements.txt and install\_requires across repos [\#21](https://github.com/NASA-PDS/pds-template-repo-python/issues/21)
+- As a developer I want integration of linters and code formatters to the default template repos [\#20](https://github.com/NASA-PDS/pds-template-repo-python/issues/20)
+- Add 1 template python test so python tests can successfully run via CI/CD \(e.g. `sys.exit(1)`\) [\#18](https://github.com/NASA-PDS/pds-template-repo-python/issues/18)
+- Improvements to template repo [\#13](https://github.com/NASA-PDS/pds-template-repo-python/issues/13)
 
 **Defects:**
 
 - Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/pds-template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/pds-template-repo-python/labels/s.medium)]
+
+**Other closed issues:**
+
+- CODEOWNERS group lacks write permission to the repository [\#38](https://github.com/NASA-PDS/pds-template-repo-python/issues/38)
+- Add Python 3.9 Trove classifier [\#34](https://github.com/NASA-PDS/pds-template-repo-python/issues/34)
 
 ## [v1.0.0](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0) (2021-06-08)
 
