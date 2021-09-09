@@ -19,6 +19,15 @@ https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#creatin
 | `@NASA-PDS/pds-software-pmc`        | `admin`    |
 | `@NASA-PDS/pds-operations`          | `admin`    |
 
+---
+
+# My Project
+
+This is the XYZ that does this, that, and the other thing for the Planetary Data System.
+
+Please visit our website at: https://nasa-pds.github.io/pds-my-project
+
+It has useful information for developers and end-users.
 
 ## Prerequisites
 
