@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.0.0+93.g86418b2.3.g60cb180](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180) (2021-09-03)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2...v1.0.0+93.g86418b2.3.g60cb180)
+
 ## [v1.0.0+93.g86418b2](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2) (2021-09-03)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+93.g86418b2)
