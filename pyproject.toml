@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 46.4.0", "wheel"]
+requires = ["setuptools >= 46.4.0", "wheel", "versioneer-518"]
 
 # uncomment to enable pep517 after versioneer problem is fixed.
 # https://github.com/python-versioneer/python-versioneer/issues/193
