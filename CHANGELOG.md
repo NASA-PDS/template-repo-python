@@ -1,5 +1,17 @@
 # Changelog
 
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-15)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a...«unknown»)
+
+**Other closed issues:**
+
+- Tox runs failing on converted repositories [\#40](https://github.com/NASA-PDS/pds-template-repo-python/issues/40)
+
+## [v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a) (2021-09-09)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180...v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a)
+
 ## [v1.0.0+93.g86418b2.3.g60cb180](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180) (2021-09-03)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2...v1.0.0+93.g86418b2.3.g60cb180)
