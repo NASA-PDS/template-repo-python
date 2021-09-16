@@ -148,7 +148,24 @@ The `dev` `extras_require` included in the template repo installs `black`, `flak
 
 ### Code Style
 
-So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). Our code style is automatically enforced in via [black](https://pypi.org/project/black/). See the [Tooling section](#-tooling)
+So that your code is readable, you should comply with the [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/). Our code style is automatically enforced in via [black](https://pypi.org/project/black/) and [flake8](https://flake8.pycqa.org/en/latest/). See the [Tooling section](#-tooling) for information on invoking the linting pipeline.
+
+❗Important note for template users❗
+The included [pre-commit configuration file](.pre-commit-config.yaml) executes `flake8` (along with `mypy`) across the entire `src` folder and not only on changed files. If you're converting a pre-existing code base over to this template that may result in a lot of errors that you aren't ready to deal with.
+
+You can instead execute `flake8` only over a diff of the current changes being made by modifying the `pre-commit` `entry` line:
+
+    entry: git diff -u | flake8 --diff
+
+Or you can change the `pre-commit` config so `flake8` is only called on changed files which match a certain filtering criteria:
+
+    -   repo: local
+        hooks:
+        -   id: flake8
+            name: flake8
+            entry: flake8
+            files: ^src/|tests/
+            language: system
 
 
 ### Recommended Libraries
