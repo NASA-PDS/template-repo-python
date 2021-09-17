@@ -1,4 +1,4 @@
-# pds-template-repo-python
+# PDS Template Repository for Python
 
 This is the template repository for PDS's Python projects.
 
