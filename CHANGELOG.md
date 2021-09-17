@@ -1,8 +1,8 @@
 # Changelog
 
-## [v1.0.0+116.g3960b45-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+116.g3960b45-SNAPSHOT) (2021-09-17)
+## [v1.0.0+118.g46c18fd-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+118.g46c18fd-SNAPSHOT) (2021-09-17)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+116.g3960b45-SNAPSHOT)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+118.g46c18fd-SNAPSHOT)
 
 **Requirements:**
 
