@@ -244,19 +244,20 @@ NASA PDS packages can publish automatically using the [Roundup Action](https://g
 
 Create the package:
 
-    python setup.py sdist
+    python setup.py bdist_wheel
 
 Publish it as a Github release.
 
-Publish on pypi (you need a pypi account and configure `$HOME/.pypirc`):
+Publish on PyPI (you need a PyPI account and configure `$HOME/.pypirc`):
 
     pip install twine
     twine upload dist/*
 
-Or publish on testpypi (you need a testpypi account and configure `$HOME/.pypirc`):
+Or publish on the Test PyPI (you need a Test PyPI account and configure `$HOME/.pypirc`):
 
     pip install twine
     twine upload --repository testpypi dist/*
 
 ## CI/CD
+
 The template repository comes with our two "standard" CI/CD workflows, `stable-cicd` and `unstable-cicd`. The unstable build runs on any push to `main` (± ignoring changes to specific files) and the stable build runs on push of a release branch of the form `release/<release version>`. Both of these make use of our GitHub actions build step, [Roundup](https://github.com/NASA-PDS/roundup-action). The `unstable-cicd` will generate (and constantly update) a SNAPSHOT release. If you haven't done a formal software release you will end up with a `v0.0.0-SNAPSHOT` release (see NASA-PDS/roundup-action#56 for specifics).
