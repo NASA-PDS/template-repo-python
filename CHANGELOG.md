@@ -2,33 +2,7 @@
 
 ## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-17)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.12.g9dc7c8a-SNAPSHOT...«unknown»)
-
-**Other closed issues:**
-
-- Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/pds-template-repo-python/issues/47)
-
-## [v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.12.g9dc7c8a-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.12.g9dc7c8a-SNAPSHOT) (2021-09-17)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a...v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.12.g9dc7c8a-SNAPSHOT)
-
-**Other closed issues:**
-
-- Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/pds-template-repo-python/issues/46)
-- pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/pds-template-repo-python/issues/43)
-- Tox runs failing on converted repositories [\#40](https://github.com/NASA-PDS/pds-template-repo-python/issues/40)
-
-## [v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a) (2021-09-09)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180...v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a)
-
-## [v1.0.0+93.g86418b2.3.g60cb180](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180) (2021-09-03)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2...v1.0.0+93.g86418b2.3.g60cb180)
-
-## [v1.0.0+93.g86418b2](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2) (2021-09-03)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+93.g86418b2)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...«unknown»)
 
 **Requirements:**
 
@@ -52,6 +26,10 @@
 
 **Other closed issues:**
 
+- Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/pds-template-repo-python/issues/47)
+- Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/pds-template-repo-python/issues/46)
+- pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/pds-template-repo-python/issues/43)
+- Tox runs failing on converted repositories [\#40](https://github.com/NASA-PDS/pds-template-repo-python/issues/40)
 - CODEOWNERS group lacks write permission to the repository [\#38](https://github.com/NASA-PDS/pds-template-repo-python/issues/38)
 - Add Python 3.9 Trove classifier [\#34](https://github.com/NASA-PDS/pds-template-repo-python/issues/34)
 
