@@ -1,8 +1,17 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-15)
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-17)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a...«unknown»)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.6.gebcf14f-SNAPSHOT...«unknown»)
+
+**Other closed issues:**
+
+- Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/pds-template-repo-python/issues/46)
+- pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/pds-template-repo-python/issues/43)
+
+## [v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.6.gebcf14f-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.6.gebcf14f-SNAPSHOT) (2021-09-15)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a...v1.0.0+93.g86418b2.3.g60cb180.3.gd51b83a.6.gebcf14f-SNAPSHOT)
 
 **Other closed issues:**
 
