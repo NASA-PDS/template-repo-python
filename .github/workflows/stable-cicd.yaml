@@ -74,3 +74,5 @@ jobs:
                     ADMIN_GITHUB_TOKEN: ${{secrets.ADMIN_GITHUB_TOKEN}}
 
 ...
+
+# -*- mode: yaml; indent: 4; fill-column: 120; coding: utf-8 -*-
