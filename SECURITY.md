@@ -1,19 +1,19 @@
 # Security Policy
 
-This document describes the security policy of this package.
+This document describes the security policy of My Project. (Please update this for your actual project.)
 
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are currently being supported with security updates.
+Use this section to tell people about which versions of your project are currently being supported with security updates; for example, with a table like the following:
 
-| Version  | Supported          |
-| -------- | ------------------ |
-| 1.18.2   | :white_check_mark: |
-| 1.17.5   | :white_check_mark: |
-| < 1.17.5 | :x:                |
+| Version | Supported |
+|:--------|:---------:|
+| 2.1.4   | ✅        |
+| 2.1.3   | ✅        |
+| <2.0    | ❌        |
 
 
 ## Reporting a Vulnerability
 
-To report a vulnerability in this package, please [submit a new isssue using the Vulnerability Issue template](https://github.com/NASA-PDS-Incubator/validate/issues/new?assignees=jordanpadams&labels=triage-needed%2C+security&template=vulnerability-issue.md&title=%5BSECURITY%5D+Title+Here).
+To report a vulnerability, [please submit an issue on our tracker](https://github.com/NASA-PDS/<TODO: put project ID here>/issues/new?template=vulnerability-issue.md).
