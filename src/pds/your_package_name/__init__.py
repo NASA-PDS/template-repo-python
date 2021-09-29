@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """My PDS Module."""
-from ._version import get_versions
+import pkg_resources
 
-__version__ = get_versions()["version"]
-__date__ = get_versions()["date"]
-del get_versions
+
+__version__ = pkg_resources.resource_string(__name__, "VERSION.txt").decode("utf-8").strip()
 
 
 # For future consideration:
