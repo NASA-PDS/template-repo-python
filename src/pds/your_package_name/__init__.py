@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """My PDS Module."""
+import pkg_resources
 
-__version__ = "0.1.0"
+
+__version__ = pkg_resources.resource_string(__name__, "VERSION.txt").decode("utf-8").strip()
 
 
 # For future consideration:
