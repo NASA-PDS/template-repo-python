@@ -1,8 +1,8 @@
 # Changelog
 
-## [v8.0.1-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v8.0.1-SNAPSHOT) (2021-09-29)
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-30)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v8.0.1-SNAPSHOT)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...«unknown»)
 
 **Requirements:**
 
