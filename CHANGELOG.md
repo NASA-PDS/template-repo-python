@@ -1,16 +1,8 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-python/tree/«unknown») (2021-09-29)
+## [v8.0.1-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v8.0.1-SNAPSHOT) (2021-09-29)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0+124.ga0921aa-SNAPSHOT...«unknown»)
-
-**Other closed issues:**
-
-- Remove Versioneer [\#50](https://github.com/NASA-PDS/pds-template-repo-python/issues/50)
-
-## [v1.0.0+124.ga0921aa-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0+124.ga0921aa-SNAPSHOT) (2021-09-21)
-
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v1.0.0+124.ga0921aa-SNAPSHOT)
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v8.0.1-SNAPSHOT)
 
 **Requirements:**
 
@@ -34,6 +26,7 @@
 
 **Other closed issues:**
 
+- Remove Versioneer [\#50](https://github.com/NASA-PDS/pds-template-repo-python/issues/50)
 - Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/pds-template-repo-python/issues/47)
 - Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/pds-template-repo-python/issues/46)
 - pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/pds-template-repo-python/issues/43)
