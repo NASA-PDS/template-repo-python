@@ -1,56 +1,56 @@
 # Changelog
 
-## [v8.0.1-dev](https://github.com/NASA-PDS/pds-template-repo-python/tree/v8.0.1-dev) (2021-09-30)
+## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2021-12-03)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/v1.0.0...v8.0.1-dev)
+[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
 
 **Requirements:**
 
-- As a developer I want to baseline on acceptable Python versions [\#28](https://github.com/NASA-PDS/pds-template-repo-python/issues/28)
-- As a developer, I want to know how to generate the Sphinx documentation [\#7](https://github.com/NASA-PDS/pds-template-repo-python/issues/7)
+- As a developer I want to baseline on acceptable Python versions [\#28](https://github.com/NASA-PDS/template-repo-python/issues/28)
+- As a developer, I want to know how to generate the Sphinx documentation [\#7](https://github.com/NASA-PDS/template-repo-python/issues/7)
 
 **Improvements:**
 
-- Add README sections referencing Community Health Files [\#36](https://github.com/NASA-PDS/pds-template-repo-python/issues/36)
-- As a developer I want to add default tox configuration [\#29](https://github.com/NASA-PDS/pds-template-repo-python/issues/29)
-- As a developer I want a powerful testing library included in our template repo [\#25](https://github.com/NASA-PDS/pds-template-repo-python/issues/25)
-- As a developer I want hooks to enforce code quality checks, formatter execution, and unit tests [\#22](https://github.com/NASA-PDS/pds-template-repo-python/issues/22)
-- As a developer I want a consistent use of requirements.txt and install\_requires across repos [\#21](https://github.com/NASA-PDS/pds-template-repo-python/issues/21)
-- As a developer I want integration of linters and code formatters to the default template repos [\#20](https://github.com/NASA-PDS/pds-template-repo-python/issues/20)
-- Add 1 template python test so python tests can successfully run via CI/CD \(e.g. `sys.exit(1)`\) [\#18](https://github.com/NASA-PDS/pds-template-repo-python/issues/18)
-- Improvements to template repo [\#13](https://github.com/NASA-PDS/pds-template-repo-python/issues/13)
+- Add README sections referencing Community Health Files [\#36](https://github.com/NASA-PDS/template-repo-python/issues/36)
+- As a developer I want to add default tox configuration [\#29](https://github.com/NASA-PDS/template-repo-python/issues/29)
+- As a developer I want a powerful testing library included in our template repo [\#25](https://github.com/NASA-PDS/template-repo-python/issues/25)
+- As a developer I want hooks to enforce code quality checks, formatter execution, and unit tests [\#22](https://github.com/NASA-PDS/template-repo-python/issues/22)
+- As a developer I want a consistent use of requirements.txt and install\_requires across repos [\#21](https://github.com/NASA-PDS/template-repo-python/issues/21)
+- As a developer I want integration of linters and code formatters to the default template repos [\#20](https://github.com/NASA-PDS/template-repo-python/issues/20)
+- Add 1 template python test so python tests can successfully run via CI/CD \(e.g. `sys.exit(1)`\) [\#18](https://github.com/NASA-PDS/template-repo-python/issues/18)
+- Improvements to template repo [\#13](https://github.com/NASA-PDS/template-repo-python/issues/13)
 
 **Defects:**
 
-- Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/pds-template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/pds-template-repo-python/labels/s.medium)]
+- Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/template-repo-python/labels/s.medium)]
 
 **Other closed issues:**
 
-- Remove Versioneer [\#50](https://github.com/NASA-PDS/pds-template-repo-python/issues/50)
-- Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/pds-template-repo-python/issues/47)
-- Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/pds-template-repo-python/issues/46)
-- pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/pds-template-repo-python/issues/43)
-- Tox runs failing on converted repositories [\#40](https://github.com/NASA-PDS/pds-template-repo-python/issues/40)
-- CODEOWNERS group lacks write permission to the repository [\#38](https://github.com/NASA-PDS/pds-template-repo-python/issues/38)
-- Add Python 3.9 Trove classifier [\#34](https://github.com/NASA-PDS/pds-template-repo-python/issues/34)
+- Remove Versioneer [\#50](https://github.com/NASA-PDS/template-repo-python/issues/50)
+- Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/template-repo-python/issues/47)
+- Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/template-repo-python/issues/46)
+- pre-commit mypy execution can't find dependencies [\#43](https://github.com/NASA-PDS/template-repo-python/issues/43)
+- Tox runs failing on converted repositories [\#40](https://github.com/NASA-PDS/template-repo-python/issues/40)
+- CODEOWNERS group lacks write permission to the repository [\#38](https://github.com/NASA-PDS/template-repo-python/issues/38)
+- Add Python 3.9 Trove classifier [\#34](https://github.com/NASA-PDS/template-repo-python/issues/34)
 
-## [v1.0.0](https://github.com/NASA-PDS/pds-template-repo-python/tree/v1.0.0) (2021-06-08)
+## [v1.0.0](https://github.com/NASA-PDS/template-repo-python/tree/v1.0.0) (2021-06-08)
 
-[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-python/compare/ab80899dbf13ccf7d0b2e1debd5ec2c66270fec5...v1.0.0)
+[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/ab80899dbf13ccf7d0b2e1debd5ec2c66270fec5...v1.0.0)
 
 **Improvements:**
 
-- As a developer, I want a template repo that shows me how to use Python namespace packages [\#5](https://github.com/NASA-PDS/pds-template-repo-python/issues/5)
-- Define a PDS standard to manage version in python project [\#2](https://github.com/NASA-PDS/pds-template-repo-python/issues/2)
-- Have multiple license options [\#1](https://github.com/NASA-PDS/pds-template-repo-python/issues/1)
+- As a developer, I want a template repo that shows me how to use Python namespace packages [\#5](https://github.com/NASA-PDS/template-repo-python/issues/5)
+- Define a PDS standard to manage version in python project [\#2](https://github.com/NASA-PDS/template-repo-python/issues/2)
+- Have multiple license options [\#1](https://github.com/NASA-PDS/template-repo-python/issues/1)
 
 **Defects:**
 
-- Roundup fails on python template repo [\#8](https://github.com/NASA-PDS/pds-template-repo-python/issues/8) [[s.low](https://github.com/NASA-PDS/pds-template-repo-python/labels/s.low)]
+- Roundup fails on python template repo [\#8](https://github.com/NASA-PDS/template-repo-python/issues/8) [[s.low](https://github.com/NASA-PDS/template-repo-python/labels/s.low)]
 
 **Other closed issues:**
 
-- Add the roundup action in the template [\#3](https://github.com/NASA-PDS/pds-template-repo-python/issues/3)
+- Add the roundup action in the template [\#3](https://github.com/NASA-PDS/template-repo-python/issues/3)
 
 
 
