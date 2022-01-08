@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2021-12-03)
+## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2021-12-15)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
 
