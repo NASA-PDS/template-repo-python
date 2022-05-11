@@ -17,8 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
+# TODO - Update with your project name
 project = 'My PDS Project'
-copyright = '2021 California Institute of Technology'
+copyright = '2022 California Institute of Technology'
 author = 'NASA Planetary Data System'
 release = '0.0'
 version = '0.0'
@@ -64,8 +65,28 @@ html_static_path = ['_static']
 
 html_logo = '_static/images/PDS_Planets.png'
 
+# TODO - Update with your user/org and repo
 html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-      }
+    'display_github': True,
+    "github_user": "nasa-pds",
+    "github_repo": "template-repo-python",
+    "github_version": "main/docs/source/"
+}
+
+html_css_files = [
+    'theme_overrides.css',
+]
+
+html_theme_options = {
+    'canonical_url': '',
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    # Toc options
+    'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
