@@ -3,7 +3,9 @@ repos:
     rev: v4.0.1
     hooks:
     -   id: trailing-whitespace
+        exclude: REQUIREMENTS\.md$
     -   id: end-of-file-fixer
+        exclude: REQUIREMENTS\.md$
     -   id: check-executables-have-shebangs
     -   id: check-merge-conflict
     -   id: debug-statements
@@ -16,30 +18,36 @@ repos:
     -   id: reorder-python-imports
         files: ^src/|tests/
 
--   repo: local
+-   repo: https://github.com/pre-commit/mirrors-mypy.git
+    rev: v0.910
     hooks:
     -   id: mypy
-        name: mypy
-        entry: mypy src
-        language: system
-        pass_filenames: false
+        files: ^src/|tests/
+        # 😔 These `additional_dependencies` mirror those in the `dev` extra of `setup.cfg` and are needed
+        # to run `mypy` under `tox`. This violates "DRY" but we don't have a better way of doing this—yet.
+        additional_dependencies: [
+            lxml-stubs,
+            pandas-stubs,
+            types-flask,
+            types-jsonschema,
+            types-pkg_resources,
+            types-python-dateutil,
+            types-requests,
+            types-six,
+            types-waitress
+        ]
 
--   repo: local
+-   repo: https://github.com/python/black
+    rev: 22.3.0
     hooks:
     -   id: black
-        name: black
-        entry: black
         files: ^src/|tests/
-        language: system
-        types: [python]
 
--   repo: local
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.9.2
     hooks:
     -   id: flake8
-        name: flake8
-        entry: flake8 src
-        language: system
-        pass_filenames: false
+        files: ^src/|tests/
 
 -   repo: local
     hooks:
