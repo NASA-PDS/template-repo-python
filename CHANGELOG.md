@@ -1,6 +1,14 @@
 # Changelog
 
-## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-05-11)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2022-06-27)
+
+[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.1.0-dev...«unknown»)
+
+**Defects:**
+
+- Pre-commit modifies generated REQUIREMENTS.md files [\#58](https://github.com/NASA-PDS/template-repo-python/issues/58)
+
+## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-06-17)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
 
