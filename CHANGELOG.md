@@ -1,14 +1,14 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2022-06-27)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2022-08-19)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.1.0-dev...«unknown»)
 
-**Defects:**
+**Requirements:**
 
-- Pre-commit modifies generated REQUIREMENTS.md files [\#58](https://github.com/NASA-PDS/template-repo-python/issues/58)
+- As a developer, I want to perform continuous integration tests on branches [\#56](https://github.com/NASA-PDS/template-repo-python/issues/56)
 
-## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-06-17)
+## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-06-27)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
 
@@ -30,6 +30,7 @@
 
 **Defects:**
 
+- Pre-commit modifies generated REQUIREMENTS.md files [\#58](https://github.com/NASA-PDS/template-repo-python/issues/58)
 - Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/template-repo-python/labels/s.medium)]
 
 **Other closed issues:**
