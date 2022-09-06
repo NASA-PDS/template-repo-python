@@ -1,19 +1,12 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2022-08-19)
-
-[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.1.0-dev...«unknown»)
-
-**Requirements:**
-
-- As a developer, I want to perform continuous integration tests on branches [\#56](https://github.com/NASA-PDS/template-repo-python/issues/56)
-
-## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-06-27)
+## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-08-19)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
 
 **Requirements:**
 
+- As a developer, I want to perform continuous integration tests on branches [\#56](https://github.com/NASA-PDS/template-repo-python/issues/56)
 - As a developer I want to baseline on acceptable Python versions [\#28](https://github.com/NASA-PDS/template-repo-python/issues/28)
 - As a developer, I want to know how to generate the Sphinx documentation [\#7](https://github.com/NASA-PDS/template-repo-python/issues/7)
 
