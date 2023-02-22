@@ -70,8 +70,12 @@ Install in editable mode and with extra developer dependencies into your virtual
 
 Configure the `pre-commit` hooks:
 
-    pre-commit install && pre-commit install -t pre-push
+    pre-commit install
+    pre-commit install -t pre-push
+    pre-commit install -t prepare-commit-msg
+    pre-commit install -t commit-msg
 
+These hooks check code formatting and also aborts commits that contain secrets such as passwords or API keys. However, a one time setup is required in your global Git configuration. See [the wiki entry on Git Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#git-secrets) to learn how.
 
 ### Packaging
 
@@ -79,7 +83,7 @@ To isolate and be able to re-produce the environment for this package, you shoul
 
     python -m venv venv
 
-Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc. (It is no longer recommended to use `venv/bin/activate`.)
+Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc.
 
 If you have `tox` installed and would like it to create your environment and install dependencies for you run:
 
