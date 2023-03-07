@@ -1,8 +1,8 @@
 # Changelog
 
-## [v1.1.0-dev](https://github.com/NASA-PDS/template-repo-python/tree/v1.1.0-dev) (2022-11-29)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2023-03-07)
 
-[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...v1.1.0-dev)
+[Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...«unknown»)
 
 **Requirements:**
 
@@ -28,6 +28,7 @@
 
 **Other closed issues:**
 
+- Add git-secrets pre-commit to python template repo [\#65](https://github.com/NASA-PDS/template-repo-python/issues/65)
 - Remove Versioneer [\#50](https://github.com/NASA-PDS/template-repo-python/issues/50)
 - Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/template-repo-python/issues/47)
 - Add flake8 configuration details for existing code bases adopting the template repo [\#46](https://github.com/NASA-PDS/template-repo-python/issues/46)
