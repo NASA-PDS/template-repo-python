@@ -6,6 +6,7 @@ on:
       - '**'
   pull_request:
     types: [opened, edited, reopened, ready_for_review, review_requested]
+  workflow_dispatch:
 
 permissions:
   id-token: write  # required to use OIDC authentication
