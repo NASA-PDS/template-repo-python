@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.4.0
     hooks:
     -   id: trailing-whitespace
         exclude: REQUIREMENTS\.md$
@@ -11,6 +11,17 @@ repos:
     -   id: debug-statements
     -   id: check-yaml
         files: .*\.(yaml|yml)$
+    -   id: check-json
+    -   id: pretty-format-json
+
+-   repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.81.0
+    hooks:
+    - id: terraform_fmt
+    - id: terraform_validate
+    - id: terraform_tflint
+    - id: terrascan
+    - id: terraform_tfsec
 
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v2.6.0

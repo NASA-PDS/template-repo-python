@@ -1,0 +1,64 @@
+name: 'Terraform-Workflow'
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    types: [opened, edited, reopened, ready_for_review, review_requested]
+  workflow_dispatch:
+
+permissions:
+  id-token: write  # required to use OIDC authentication
+  contents: read # required to checkout the code from the repo
+
+jobs:
+  deploy:
+    name: 'Terraform'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./terraform
+    environment: NGAP DEV # default NGAP env, can be changed as needed
+    env:
+      TF_LOG: INFO
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-region: "${{ secrets.AWS_REGION }}"
+        role-to-assume: ${{ secrets.AWS_ASSUME_ROLE }}
+        role-session-name: PDS_GitHub_OIDC_TERRAFORM
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform Fmt, Init & Validate
+      id: fmt_init_validate
+      env:
+        AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME}}
+        AWS_BUCKET_KEY_NAME: ${{ secrets.AWS_BUCKET_KEY_NAME}}
+      run: |
+        terraform fmt
+        terraform init -backend-config="bucket=${AWS_BUCKET_NAME}" -backend-config="key=${AWS_BUCKET_KEY_NAME}"
+        terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
+      if: github.event_name == 'push' || github.event_name == 'pull_request' # either conditions will trigger a plan
+      continue-on-error:  true
+
+    - name: Terraform Plan Status
+      id : plan_status
+      if: steps.plan.outcome == 'failure'
+      run: exit 1
+
+    - name: Terraform Apply
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push' # both conditions have to be met
+      run: terraform apply -auto-approve
