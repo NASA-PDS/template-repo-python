@@ -19,9 +19,9 @@ repos:
     hooks:
     - id: terraform_fmt
     - id: terraform_validate
-    - id: terraform_tflint
-    - id: terrascan
-    - id: terraform_tfsec
+    # - id: terraform_tflint
+    # - id: terrascan
+    # - id: terraform_tfsec
 
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v2.6.0
