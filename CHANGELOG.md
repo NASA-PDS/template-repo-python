@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2023-09-05)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2023-09-30)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...«unknown»)
 
@@ -23,6 +23,7 @@
 
 **Defects:**
 
+- The template's `setup.cfg` leaves a ton of packages un-pinned [\#73](https://github.com/NASA-PDS/template-repo-python/issues/73)
 - Local pre-commit checks pass, but in branch workflow fails [\#67](https://github.com/NASA-PDS/template-repo-python/issues/67) [[s.medium](https://github.com/NASA-PDS/template-repo-python/labels/s.medium)]
 - Pre-commit modifies generated REQUIREMENTS.md files [\#58](https://github.com/NASA-PDS/template-repo-python/issues/58)
 - Unstable build fails per issue with versioning [\#14](https://github.com/NASA-PDS/template-repo-python/issues/14) [[s.medium](https://github.com/NASA-PDS/template-repo-python/labels/s.medium)]
