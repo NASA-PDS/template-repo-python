@@ -68,14 +68,41 @@ Install in editable mode and with extra developer dependencies into your virtual
 
     pip install --editable '.[dev]'
 
-Configure the `pre-commit` hooks:
+Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in the repository:
+
+    detect-secrets scan . \
+        --all-files \
+        --disable-plugin AbsolutePathDetectorExperimental \
+        --exclude-files '\.secrets..*' \
+        --exclude-files '\.git.*' \
+        --exclude-files '\.mypy_cache' \
+        --exclude-files '\.pytest_cache' \
+        --exclude-files '\.tox' \
+        --exclude-files '\.venv' \
+        --exclude-files 'venv' \
+        --exclude-files 'dist' \
+        --exclude-files 'build' \
+        --exclude-files '.*\.egg-info' > .secrets.baseline
+
+Review the secrets to determine which should be allowed and which are false positives:
+
+    detect-secrets audit .secrets.baseline
+
+Please remove any secrets that should not be seen by the public. You can then add the baseline file to the commit:
+
+    git add .secrets.baseline
+
+Then, configure the `pre-commit` hooks:
 
     pre-commit install
     pre-commit install -t pre-push
     pre-commit install -t prepare-commit-msg
     pre-commit install -t commit-msg
 
-These hooks check code formatting and also aborts commits that contain secrets such as passwords or API keys. However, a one time setup is required in your global Git configuration. See [the wiki entry on Git Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#git-secrets) to learn how.
+These hooks then will check for any future commits that might contain secrets. They also check code formatting, PEP8 compliance, type hints, etc.
+
+👉 **Note:** A one time setup is required both to support `detect-secrets` and in your global Git configuration. See [the wiki entry on Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how.
+
 
 ### Packaging
 
@@ -127,6 +154,7 @@ You should not use `print()`vin the purpose of logging information on the execut
 To make that work, start each Python file with:
 
 ```python
+"""My module."""
 import logging
 
 logger = logging.getLogger(__name__)
