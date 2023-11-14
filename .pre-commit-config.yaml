@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.0.1
     hooks:
     -   id: trailing-whitespace
         exclude: REQUIREMENTS\.md$
@@ -11,17 +11,6 @@ repos:
     -   id: debug-statements
     -   id: check-yaml
         files: .*\.(yaml|yml)$
-    -   id: check-json
-    -   id: pretty-format-json
-
--   repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.81.0
-    hooks:
-    - id: terraform_fmt
-    - id: terraform_validate
-    # - id: terraform_tflint
-    # - id: terrascan
-    # - id: terraform_tfsec
 
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v2.6.0
@@ -63,9 +52,21 @@ repos:
         stages: [push]
         pass_filenames: false
 
-# #65: support for git-secrets
--   repo: https://github.com/awslabs/git-secrets.git
-    # We have to use an sha here instead of a tag because of awslabs/git-secrets#182
-    rev: b9e96b3212fa06aea65964ff0d5cda84ce935f38
+-   repo: https://github.com/NASA-AMMOS/slim-detect-secrets
+    # using commit id for now, will change to tag when official version is released
+    rev: 91e097ad4559ae6ab785c883dc5ed989202c7fbe
     hooks:
-    -   id: git-secrets
+      - id: detect-secrets
+        args:
+          - '--baseline'
+          - '.secrets.baseline'
+          - --exclude-files '\.secrets..*'
+          - --exclude-files '\.git.*'
+          - --exclude-files '\.mypy_cache'
+          - --exclude-files '\.pytest_cache'
+          - --exclude-files '\.tox'
+          - --exclude-files '\.venv'
+          - --exclude-files 'venv'
+          - --exclude-files 'dist'
+          - --exclude-files 'build'
+          - --exclude-files '.*\.egg-info'
