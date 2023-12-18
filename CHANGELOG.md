@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2023-12-11)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2023-12-18)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...«unknown»)
 
