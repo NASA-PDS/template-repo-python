@@ -16,3 +16,7 @@ This requirement is not impacted by the current version
 
 
 This requirement is not impacted by the current version
+## As a devops, I'd like PDS Python apps to look like modern non-PDS Python apps ([#89](https://github.com/NASA-PDS/template-repo-python/issues/89)) 
+
+
+This requirement is not impacted by the current version
