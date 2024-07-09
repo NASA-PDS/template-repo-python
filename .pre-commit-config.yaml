@@ -70,3 +70,4 @@ repos:
           - --exclude-files 'dist'
           - --exclude-files 'build'
           - --exclude-files '.*\.egg-info'
+          - --exclude-files '\.pre-commit-config.yaml'
