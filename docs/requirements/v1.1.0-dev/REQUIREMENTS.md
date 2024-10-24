@@ -20,3 +20,7 @@ This requirement is not impacted by the current version
 
 
 This requirement is not impacted by the current version
+## As a developer, I want the lint hooks to actually commit automatic fixes, not just whinge that a file is missing an EoL or what have you ([#90](https://github.com/NASA-PDS/template-repo-python/issues/90)) 
+
+
+This requirement is not impacted by the current version
