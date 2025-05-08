@@ -68,7 +68,7 @@ jobs:
                 with:
                     args: >
                         -Dsonar.projectKey=NASA-PDS_template-repo-python
-                        -Dsonar.organization=NASA-PDS
+                        -Dsonar.organization=nasa-pds
                         -Dsonar.python.coverage.reportPaths=coverage.xml
                 env:
                     SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
