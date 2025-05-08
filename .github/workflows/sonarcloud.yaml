@@ -17,7 +17,7 @@ on:
     push:
         branches:
             - 'main'
-            - 'i104'  # For testing purposes; should be removed
+            - 'i104'  # For testing purposes; should be removed once we confirm it working end-to-end
     pull_request:
         types: [opened, synchronize, reopened]
 
