@@ -57,8 +57,11 @@ jobs:
             -
                 name: 🩺 Testing and coverage
                 run: |
-                    coverage run --module pytest
+                    echo '1️⃣ Running coverage run'
+                    coverage run --source=src/pds --module pytest
+                    echo '2️⃣ Running coverage xml'
                     coverage xml
+                    echo '3️⃣ there is no step 3'
             -
                 name: 📡 Sonar scan
                 uses: SonarSource/sonarcloud-github-action@v2
