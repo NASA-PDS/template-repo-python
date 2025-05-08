@@ -1,0 +1,75 @@
+# 🏃‍♀️ SonarCloud: Code Quality and Coverage
+# ========================================
+#
+# Note: for this workflow to succeed, the following secrets must be installed
+# in the repository:
+#
+# - `SONAR_CLOUD` — an access token which you can from sonarcloud.io
+
+---
+
+name: 📡☁️ SonarCloud
+
+
+# Driving Event
+
+on:
+    push:
+        branches:
+            - 'main'
+            - 'i104'  # For testing purposes; should be removed
+    pull_request:
+        types: [opened, synchronize, reopened]
+
+
+# What to Do
+
+jobs:
+    sonar:
+        name: 📡☁️ SonarCloud Analysis
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: 💳 Checkout
+                uses: actions/checkout@v4
+                with:
+                    lfs: true
+                    token: ${{secrets.ADMIN_GITHUB_TOKEN}}
+                    fetch-depth: 0
+            -
+                name: 💵 Python Cache
+                uses: actions/cache@v4
+                with:
+                    path: ~/.cache/pip
+                    key: pds-${{runner.os}}-py-${{hashFiles('**/*.whl')}}
+                    # To restore a set of files, we only need to match a prefix of the saved key.
+                    restore-keys: pds-${{runner.os}}-py-
+            -
+                name: 🐍 Python
+                uses: actions/setup-python@v5
+                with:
+                    python-version: '3.9'
+            -
+                name: 👷 Installation
+                run: |
+                    python3 -m pip install --upgrade --quiet pip
+                    pip install --editable '.[dev]'
+            -
+                name: 🩺 Testing and coverage
+                run: |
+                    coverage run --module pytest
+                    coverage xml
+            -
+                name: 📡 Sonar scan
+                uses: SonarSource/sonarcloud-github-action@v2
+                with:
+                    args: >
+                        -Dsonar.projectKey=NASA-PDS_template-repo-python
+                        -Dsonar.organization=NASA-PDS
+                        -Dsonar.python.coverage.reportPaths=coverage.xml
+                env:
+                    SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
+
+...
+
+# -*- mode: yaml; indent: 4; fill-column: 120; coding: utf-8 -*-
