@@ -14,7 +14,6 @@ jobs:
       run:
         shell: bash
         working-directory: ./terraform
-    environment: NGAP DEV # default NGAP env, can be changed as needed
     env:
       TF_LOG: INFO
 
