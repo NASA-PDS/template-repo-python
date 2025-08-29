@@ -31,7 +31,7 @@ jobs:
         steps:
             -
                 name: 💳 Checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v5
                 with:
                     lfs: true
                     token: ${{secrets.ADMIN_GITHUB_TOKEN}}
@@ -48,7 +48,7 @@ jobs:
                 name: 🐍 Python
                 uses: actions/setup-python@v5
                 with:
-                    python-version: '3.9'
+                    python-version: '3.13'
             -
                 name: 👷 Installation
                 run: |
@@ -64,7 +64,7 @@ jobs:
                     echo '3️⃣ there is no step 3'
             -
                 name: 📡 Sonar scan
-                uses: SonarSource/sonarcloud-github-action@v2
+                uses: SonarSource/sonarcloud-github-action@v5
                 with:
                     args: >
                         -Dsonar.projectKey=NASA-PDS_template-repo-python

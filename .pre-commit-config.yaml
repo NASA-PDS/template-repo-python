@@ -26,14 +26,18 @@ repos:
         language: system
         pass_filenames: false
 
--   repo: local
-    hooks:
-    -   id: black
-        name: black
-        entry: black
-        files: ^src/|tests/
-        language: system
-        types: [python]
+# "black" currently conflicts with "reorder_python_imports" (they vehemently
+# disagree on whether there should be a blank line between the module
+# docstring and the import statements), so we'll disable "black" for now.
+#
+# -   repo: local
+#     hooks:
+#     -   id: black
+#         name: black
+#         entry: black
+#         files: ^src/|tests/
+#         language: system
+#         types: [python]
 
 -   repo: local
     hooks:
@@ -58,6 +62,8 @@ repos:
     hooks:
       - id: detect-secrets
         args:
+          - '--disable-plugin'
+          - 'AbsolutePathDetectorExperimental'
           - '--baseline'
           - '.secrets.baseline'
           - --exclude-files '\.secrets..*'
@@ -70,4 +76,4 @@ repos:
           - --exclude-files 'dist'
           - --exclude-files 'build'
           - --exclude-files '.*\.egg-info'
-          - --exclude-files '\.pre-commit-config.yaml'
+          - --exclude-files '\.pre-commit-config\.yaml'
