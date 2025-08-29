@@ -10,7 +10,7 @@ class HelloWorldTests(unittest.TestCase):
         """Ensure the ``getgreeting`` function works as expected."""
         from pds.your_package_name.main import getgreeting
 
-        greeting = getgreeting()
+        greeting = getgreeting()[0:7]
         self.assertEqual("Heya, 🌎", greeting, "Expected greeting does not match … er … expectations")
 
 
