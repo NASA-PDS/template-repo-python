@@ -33,7 +33,7 @@ jobs:
         steps:
             -
                 name: 💳 Checkout
-                uses: actions/checkout@v4
+                uses: actions/checkout@v5
                 with:
                     lfs: true
                     fetch-depth: 0
@@ -42,7 +42,7 @@ jobs:
                 name: Set up Python 3
                 uses: actions/setup-python@v5
                 with:
-                    python-version: '3.9'
+                    python-version: '3.13'
             -
                 name: 💵 Python Cache
                 uses: actions/cache@v4
@@ -58,6 +58,5 @@ jobs:
                 name: 🩺 Test Software
                 run:
                     pip install --editable '.[dev]'
-
                     tox
                 shell: bash

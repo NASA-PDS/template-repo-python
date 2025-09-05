@@ -1,5 +1,7 @@
 # PDS Template Repository for Python
 
+🚨 PLEASE GO THROUGH THIS ENTIRE FILE AND UPDATE IT FOR YOUR OWN PROJECT. DELETE SECTIONS THAT AREN'T RELEVEANT. DON'T LEAVE THE BOILERPLATE INTACT! 🚨
+
 This is the template repository for PDS's Python projects.
 
 This repository aims at being a base for new python repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-python/generate)).
@@ -31,7 +33,7 @@ It has useful information for developers and end-users.
 
 ## Prerequisites
 
-Include any system-wide requirements (`brew install`, `apt-get install`, `yum install`, …) **Python 3** should be used regardless as [Python 2 reached end-of-life on January 1st, 2020](https://pythonclock.org/).
+Include any system-wide requirements (`brew install`, `apt-get install`, `yum install`, …) **Python 3.13** should be used until we say otherwise.
 
 
 ## User Quickstart
@@ -82,7 +84,9 @@ Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in 
         --exclude-files 'venv' \
         --exclude-files 'dist' \
         --exclude-files 'build' \
-        --exclude-files '.*\.egg-info' > .secrets.baseline
+        --exclude-files '.*\.egg-info' \
+        --exclude-files '\.pre-commit-config\.yaml' \
+        > .secrets.baseline
 
 Review the secrets to determine which should be allowed and which are false positives:
 
@@ -109,8 +113,7 @@ These hooks then will check for any future commits that might contain secrets. T
 To isolate and be able to re-produce the environment for this package, you should use a [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html). To do so, run:
 
     python -m venv venv
-
-Then exclusively use `venv/bin/python`, `venv/bin/pip`, etc.
+    source venv/bin/activate  # or activate.csh for csh/tcsh users
 
 If you have `tox` installed and would like it to create your environment and install dependencies for you run:
 
@@ -254,17 +257,17 @@ See an example in https://github.com/NASA-PDS/pds-doi-service#behavioral-testing
 
 Your project should use [Sphinx](https://www.sphinx-doc.org/en/master/) to build its documentation. PDS' documentation template is already configured as part of the default build. You can build your projects docs with:
 
-    python setup.py build_sphinx
+    sphinx-build docs/source docs/build
 
 You can access the build files in the following directory relative to the project root:
 
-    build/sphinx/html/
+    build/sphinx/index.html
 
 
 ## Build
 
-    pip install wheel
-    python setup.py sdist bdist_wheel
+    pip install build
+    python -m build .
 
 
 ## Publication
@@ -276,7 +279,8 @@ NASA PDS packages can publish automatically using the [Roundup Action](https://g
 
 Create the package:
 
-    python setup.py bdist_wheel
+    pip install build
+    python -m build .
 
 Publish it as a Github release.
 
@@ -289,6 +293,7 @@ Or publish on the Test PyPI (you need a Test PyPI account and configure `$HOME/.
 
     pip install twine
     twine upload --repository testpypi dist/*
+
 
 ## CI/CD
 

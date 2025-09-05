@@ -1,10 +1,11 @@
 # encoding: utf-8
 """Main demonstration module."""
+from . import VERSION
 
 
 def getgreeting() -> str:
     """Return an appropriate greeting."""
-    return "Heya, 🌎"
+    return f"Heya, 🌎 (by the way, this is {VERSION})"
 
 
 def main():
