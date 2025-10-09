@@ -37,6 +37,8 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
     'sphinx.ext.autosummary',
+    'sphinx_rtd_theme',
+    'sphinxcontrib.googleanalytics',
 ]
 
 # List of patterns, relative to source directory, that match files and
@@ -84,3 +86,7 @@ html_theme_options = {
     'includehidden': True,
     'titles_only': False
 }
+
+# Google Analytics 4 (GA4) tracking
+googleanalytics_id = "G-Q1K210DS5W"
+googleanalytics_enabled = True
