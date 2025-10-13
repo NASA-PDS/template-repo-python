@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2025-10-09)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-python/tree/«unknown») (2025-10-13)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-python/compare/v1.0.0...«unknown»)
 
@@ -30,6 +30,7 @@
 
 **Other closed issues:**
 
+- Python 3.9 EOL replacement [\#105](https://github.com/NASA-PDS/template-repo-python/issues/105)
 - Add git-secrets pre-commit to python template repo [\#65](https://github.com/NASA-PDS/template-repo-python/issues/65)
 - Remove Versioneer [\#50](https://github.com/NASA-PDS/template-repo-python/issues/50)
 - Document Roundup idiosyncrasy on fresh repository [\#47](https://github.com/NASA-PDS/template-repo-python/issues/47)
