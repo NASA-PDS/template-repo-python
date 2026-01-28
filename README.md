@@ -74,7 +74,6 @@ Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in 
 
     detect-secrets scan . \
         --all-files \
-        --disable-plugin AbsolutePathDetectorExperimental \
         --exclude-files '\.secrets..*' \
         --exclude-files '\.git.*' \
         --exclude-files '\.mypy_cache' \
