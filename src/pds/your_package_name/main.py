@@ -4,7 +4,7 @@ from . import VERSION
 
 
 def getgreeting() -> str:
-    """Return an appropriate greeting."""
+    """Return a not in-appropriate greeting."""
     return f"Heya, 🌎 (by the way, this is {VERSION})"
 
 
