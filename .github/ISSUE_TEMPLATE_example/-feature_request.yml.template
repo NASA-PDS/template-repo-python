@@ -20,7 +20,7 @@ body:
         - "Yes - I've already checked"
     validations:
       required: yes
-      
+
   - type: textarea
     id: personas
     attributes:
@@ -29,7 +29,7 @@ body:
       placeholder: Node Operator, Data Engineer, Data User, etc.
     validations:
       required: false
-      
+
   - type: textarea
     id: motivation
     attributes:
@@ -38,7 +38,7 @@ body:
       value: "...so that I can [why do you want to do this?]"
     validations:
       required: false
-      
+
   - type: textarea
     id: details
     attributes:
@@ -46,7 +46,7 @@ body:
       description: Provide any additional details, related problems, or information that could help provide some context for the user story.
     validations:
       required: false
-      
+
   - type: markdown
     attributes:
       value: |
@@ -63,7 +63,7 @@ body:
           **Then I expect** <!-- the result -->
     validations:
       required: false
-      
+
   - type: textarea
     id: engineering-details
     attributes:
