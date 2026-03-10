@@ -96,20 +96,20 @@ jobs:
                     from pathlib import Path
                     import os
 
-                    coverage = Path("coverage.xml")
-                    content = coverage.read_text(encoding="utf-8")
+                    source_report = Path("coverage.xml")
+                    sonar_report = Path("coverage-sonar.xml")
+                    content = source_report.read_text(encoding="utf-8")
                     normalized = content.replace("/github/workspace", os.environ["GITHUB_WORKSPACE"])
-
-                    if normalized != content:
-                        coverage.write_text(normalized, encoding="utf-8")
-                        print(f"Updated coverage.xml source paths to {os.environ['GITHUB_WORKSPACE']}")
-                    else:
-                        print("No /github/workspace path entries found in coverage.xml")
+                    sonar_report.write_text(normalized, encoding="utf-8")
+                    print(f"Wrote Sonar-ready coverage report to {sonar_report}")
                     PY
 
             -
                 name: 🛏️ Upload Coverage
                 uses: SonarSource/sonarqube-scan-action@v6
+                with:
+                    args: >
+                        -Dsonar.python.coverage.reportPaths=coverage-sonar.xml
                 env:
                     SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
 
