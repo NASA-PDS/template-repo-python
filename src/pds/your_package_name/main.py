@@ -9,7 +9,10 @@ def getgreeting() -> str:
 
 
 def main():
-    """Main entrypoint."""
+    """Main entrypoint.
+
+    That's why it's called "main.".
+    """
     greeting = getgreeting()
     print(greeting)
 
