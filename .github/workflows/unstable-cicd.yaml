@@ -89,6 +89,23 @@ jobs:
                         echo "🎉 coverage.xml found" 1>&2
                         ls -l coverage.xml 1>&2
                     fi
+            -
+                name: 🧭 Normalize coverage paths for Sonar
+                run: |
+                    python - <<'PY'
+                    from pathlib import Path
+                    import os
+
+                    coverage = Path("coverage.xml")
+                    content = coverage.read_text(encoding="utf-8")
+                    normalized = content.replace("/github/workspace", os.environ["GITHUB_WORKSPACE"])
+
+                    if normalized != content:
+                        coverage.write_text(normalized, encoding="utf-8")
+                        print(f"Updated coverage.xml source paths to {os.environ['GITHUB_WORKSPACE']}")
+                    else:
+                        print("No /github/workspace path entries found in coverage.xml")
+                    PY
 
             -
                 name: 🛏️ Upload Coverage
