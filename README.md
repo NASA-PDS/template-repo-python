@@ -72,28 +72,17 @@ Install in editable mode and with extra developer dependencies into your virtual
 
 Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in the repository:
 
-    detect-secrets scan . \
-        --all-files \
-        --exclude-files '\.secrets..*' \
-        --exclude-files '\.git.*' \
-        --exclude-files '\.mypy_cache' \
-        --exclude-files '\.pytest_cache' \
-        --exclude-files '\.tox' \
-        --exclude-files '\.venv' \
-        --exclude-files 'venv' \
-        --exclude-files 'dist' \
-        --exclude-files 'build' \
-        --exclude-files '.*\.egg-info' \
-        --exclude-files '\.pre-commit-config\.yaml' \
-        > .secrets.baseline
+    scripts/detect_secrets_baseline.sh scan
 
-Review the secrets to determine which should be allowed and which are false positives:
+Review and classify each detected secret (mark as `is_secret: true/false`):
 
-    detect-secrets audit .secrets.baseline
+    scripts/detect_secrets_baseline.sh audit
 
-Please remove any secrets that should not be seen by the public. You can then add the baseline file to the commit:
+Commit the baseline:
 
     git add .secrets.baseline
+
+To exclude additional files specific to this repo from scanning, add regex patterns (one per line) to `.detect-secrets-ignore`. Global exclusions (`.git`, `venv`, `dist`, etc.) are already handled by the script.
 
 Then, configure the `pre-commit` hooks:
 
@@ -103,8 +92,6 @@ Then, configure the `pre-commit` hooks:
     pre-commit install -t commit-msg
 
 These hooks then will check for any future commits that might contain secrets. They also check code formatting, PEP8 compliance, type hints, etc.
-
-👉 **Note:** A one time setup is required both to support `detect-secrets` and in your global Git configuration. See [the wiki entry on Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how.
 
 
 ### Packaging
