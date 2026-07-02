@@ -2,6 +2,8 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+> **Template repo notice:** This file was generated for `template-repo-python`. If you created a new repo from this template, update this file to reflect your project's actual package name, commands, and architecture before using it.
+
 ## Purpose
 
 This is NASA-PDS's template repository for new Python projects. When working in a repo created from this template, the placeholder `your_package_name` must be replaced with the actual module name throughout `setup.cfg`, `src/pds/`, `tests/`, and other files.
