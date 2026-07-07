@@ -71,6 +71,11 @@ if [ "$1" = "scan" ]; then
 elif [ "$1" = "audit" ]; then
     $DETECT_SECRETS audit .secrets.baseline
 else
+    if [ ! -f .secrets.baseline ]; then
+        echo "❌ .secrets.baseline not found. Run 'scripts/detect_secrets_baseline.sh scan' to generate it." >&2
+        exit 1
+    fi
+
     # Check 1: Fail if any secrets in the baseline have not been audited
     unaudited=$(python3 -c "
 import json, sys
@@ -87,6 +92,7 @@ print(count)
 
     # Check 2: Fail if any new secrets are detected that are not in the baseline
     cp .secrets.baseline .secrets.new
+    trap 'rm -f .secrets.new' EXIT
     $DETECT_SECRETS scan "${EXCLUDE_ARGS[@]}" --baseline .secrets.new
 
     if ! compare_secrets .secrets.baseline .secrets.new; then
