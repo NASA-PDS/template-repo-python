@@ -33,19 +33,19 @@ jobs:
         steps:
             -
                 name: 💳 Checkout
-                uses: actions/checkout@v6
+                uses: actions/checkout@v7
                 with:
                     lfs: true
                     fetch-depth: 0
                     token: ${{secrets.ADMIN_GITHUB_TOKEN || github.token}}
             -
                 name: Set up Python 3
-                uses: actions/setup-python@v6
+                uses: actions/setup-python@v7
                 with:
                     python-version: '3.13'
             -
                 name: 💵 Python Cache
-                uses: actions/cache@v5
+                uses: actions/cache@v6
                 with:
                     path: ~/.cache/pip
                     # The "key" used to indicate a set of cached files is the operating system runner
