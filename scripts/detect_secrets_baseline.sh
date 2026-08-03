@@ -9,9 +9,9 @@
 set -e
 
 # Prefer venv's detect-secrets over system install
-if [ -f "venv/bin/detect-secrets" ]; then
+if [[ -f "venv/bin/detect-secrets" ]]; then
     DETECT_SECRETS="venv/bin/detect-secrets"
-elif [ -f ".venv/bin/detect-secrets" ]; then
+elif [[ -f ".venv/bin/detect-secrets" ]]; then
     DETECT_SECRETS=".venv/bin/detect-secrets"
 else
     DETECT_SECRETS="detect-secrets"
@@ -39,8 +39,8 @@ for pat in "${GLOBAL_EXCLUDES[@]}"; do
 done
 
 # Per-repo excludes from .detect-secrets-ignore (one regex per line, # comments ok)
-if [ -f .detect-secrets-ignore ]; then
-    while IFS= read -r line || [ -n "$line" ]; do
+if [[ -f .detect-secrets-ignore ]]; then
+    while IFS= read -r line || [[ -n "$line" ]]; do
         [[ "$line" =~ ^[[:space:]]*# ]] && continue
         [[ -z "${line// }" ]] && continue
         EXCLUDE_ARGS+=(--exclude-files "$line")
@@ -64,14 +64,14 @@ print('\n'.join(sorted(lines)))
         >/dev/null
 }
 
-if [ "$1" = "scan" ]; then
+if [[ "$1" = "scan" ]]; then
     $DETECT_SECRETS scan "${EXCLUDE_ARGS[@]}" > .secrets.baseline
     echo "Updated .secrets.baseline"
     echo "Next step: run 'scripts/detect_secrets_baseline.sh audit' to review and classify detected secrets."
-elif [ "$1" = "audit" ]; then
+elif [[ "$1" = "audit" ]]; then
     $DETECT_SECRETS audit .secrets.baseline
 else
-    if [ ! -f .secrets.baseline ]; then
+    if [[ ! -f .secrets.baseline ]]; then
         echo "❌ .secrets.baseline not found. Run 'scripts/detect_secrets_baseline.sh scan' to generate it." >&2
         exit 1
     fi
@@ -83,14 +83,28 @@ with open('.secrets.baseline') as f: data = json.load(f)
 count = sum(1 for v in data.get('results', {}).values() for s in v if 'is_secret' not in s)
 print(count)
 ")
-    if [ "$unaudited" -gt 0 ]; then
+    if [[ "$unaudited" -gt 0 ]]; then
         echo "⚠️ Attention Required! ⚠️" >&2
-        echo "$unaudited secret(s) in .secrets.baseline have not been audited." >&2
+        echo "$unaudited finding(s) in .secrets.baseline have not been audited." >&2
         echo "Run 'scripts/detect_secrets_baseline.sh audit' to review and classify each detected secret." >&2
         exit 1
     fi
 
-    # Check 2: Fail if any new secrets are detected that are not in the baseline
+    # Check 2: Fail if any audited findings are confirmed real secrets
+    confirmed=$(python3 -c "
+import json, sys
+with open('.secrets.baseline') as f: data = json.load(f)
+count = sum(1 for v in data.get('results', {}).values() for s in v if s.get('is_secret') is True)
+print(count)
+")
+    if [[ "$confirmed" -gt 0 ]]; then
+        echo "⚠️ Attention Required! ⚠️" >&2
+        echo "$confirmed real secret(s) are present in the baseline." >&2
+        echo "Remove the secrets from your code and run 'scripts/detect_secrets_baseline.sh scan' to regenerate the baseline." >&2
+        exit 1
+    fi
+
+    # Check 3: Fail if any new secrets are detected that are not in the baseline
     cp .secrets.baseline .secrets.new
     trap 'rm -f .secrets.new' EXIT
     $DETECT_SECRETS scan "${EXCLUDE_ARGS[@]}" --baseline .secrets.new
