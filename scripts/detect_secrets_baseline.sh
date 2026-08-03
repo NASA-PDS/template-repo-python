@@ -96,7 +96,8 @@ PYTHON
 }
 
 baselines_match() {
-    diff <(baseline_fingerprints "$1") <(baseline_fingerprints "$2") > /dev/null
+    local a="$1" b="$2"
+    diff <(baseline_fingerprints "$a") <(baseline_fingerprints "$b") > /dev/null
 }
 
 # ---------------------------------------------------------------------------
