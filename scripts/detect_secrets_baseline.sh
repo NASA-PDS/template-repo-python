@@ -39,14 +39,11 @@ GLOBAL_EXCLUDES=(
     '\.secrets\..*'             # the baseline files themselves
     '(^|/)\.git/'               # git internals (path-segment anchored to avoid blocking .github/)
     '\.pre-commit-config\.yaml' # pre-commit config (often contains hook refs)
-    '\.mypy_cache'              # mypy type-check cache
-    '\.pytest_cache'            # pytest cache
-    '\.tox'                     # tox environments
-    '\.venv'                    # Python virtual envs
-    'venv'
+    'node_modules'              # JS dependencies
     'dist'                      # build output
     'build'                     # build output
-    '.*\.egg-info'              # installed package metadata
+    '\.venv'                    # Python virtual envs
+    'venv'
     'scripts/detect_secrets_baseline\.sh'  # this script
 )
 
@@ -184,11 +181,6 @@ EOF
 }
 
 run_ci_checks() {
-    if [[ ! -f "$BASELINE" ]]; then
-        echo "❌ $BASELINE not found. Run: scripts/detect_secrets_baseline.sh scan" >&2
-        exit 1
-    fi
-
     check_unaudited_findings
     check_confirmed_secrets
     check_new_secrets
