@@ -153,7 +153,8 @@ check_confirmed_secrets() {
 check_new_secrets() {
     local scratch="$BASELINE.new"
     cp "$BASELINE" "$scratch"
-    trap 'rm -f "$scratch"' RETURN
+    # shellcheck disable=SC2064
+    trap "rm -f '$scratch'" RETURN
 
     "$DETECT_SECRETS" scan "${EXCLUDE_ARGS[@]}" --baseline "$scratch" > /dev/null
 
