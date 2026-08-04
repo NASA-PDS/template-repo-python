@@ -37,7 +37,7 @@ DETECT_SECRETS="$(find_detect_secrets)"
 # Paths that are always excluded, regardless of repo type.
 GLOBAL_EXCLUDES=(
     '\.secrets\..*'             # the baseline files themselves
-    '\.git.*'                   # git internals
+    '(^|/)\.git/'               # git internals (path-segment anchored to avoid blocking .github/)
     '\.pre-commit-config\.yaml' # pre-commit config (often contains hook refs)
     '\.mypy_cache'              # mypy type-check cache
     '\.pytest_cache'            # pytest cache
