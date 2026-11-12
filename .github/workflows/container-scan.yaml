@@ -1,0 +1,125 @@
+# 🏃‍♀️ Continuous Integration: Container Image Vulnerability Scan
+# =============================================================
+#
+# Builds the image defined by ``docker/Dockerfile`` and scans it with Trivy for
+# known vulnerabilities in the operating system packages and the language
+# libraries inside the image. Dependabot does not cover OS packages, so this
+# workflow is what surfaces them.
+#
+# Repositories without a ``docker/Dockerfile`` skip every step, so it is safe to
+# leave this file in place until a Dockerfile is added.
+#
+# Results appear in three places:
+#
+# * the workflow log (table of findings),
+# * the repository's Security → Code scanning tab (SARIF, non-pull-request runs),
+# * a failed run, when a fixable finding at or above the severity threshold exists.
+#
+# The weekly schedule re-scans from a fresh base image so that CVEs published
+# after the last build are still reported.
+
+
+---
+
+name: 🔍 Container image scan
+
+
+# Driving Event
+# -------------
+#
+# Changes to the Docker build, pushes to ``main``, a weekly schedule, and manual runs.
+
+on:
+    pull_request:
+        paths:
+            - 'docker/**'
+            - '.github/workflows/container-scan.yaml'
+    push:
+        branches:
+            - main
+        paths:
+            - 'docker/**'
+    schedule:
+        - cron: '17 6 * * 1'
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+
+# What to Do
+# ----------
+
+jobs:
+    container-scan:
+        name: 🐳 Container Scan
+        runs-on: ubuntu-latest
+        if: github.actor != 'pdsen-ci'
+        permissions:
+            contents: read
+            security-events: write
+        env:
+            IMAGE: local/container-scan:${{github.sha}}
+
+        steps:
+            -
+                name: 💳 Checkout
+                uses: actions/checkout@v7
+            -
+                name: 🚢 Docker Buildx
+                if: hashFiles('docker/Dockerfile') != ''
+                uses: docker/setup-buildx-action@v4
+            -
+                name: 🧱 Image Construction
+                if: hashFiles('docker/Dockerfile') != ''
+                uses: docker/build-push-action@v7
+                with:
+                    context: ./
+                    file: ./docker/Dockerfile
+                    # Always fetch the current base image so the scan reflects what would be built today.
+                    pull: true
+                    push: false
+                    load: true
+                    tags: ${{env.IMAGE}}
+            # The Trivy action is pinned to a commit rather than a tag; a vulnerability scanner runs with
+            # access to the image contents and the job token, so it should not follow a movable reference.
+            # Dependabot's github-actions ecosystem keeps this pin current.
+            -
+                name: 🔍 Vulnerability Scan (SARIF)
+                if: hashFiles('docker/Dockerfile') != ''
+                uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25  # v0.36.0
+                with:
+                    image-ref: ${{env.IMAGE}}
+                    scanners: vuln
+                    vuln-type: os,library
+                    severity: CRITICAL,HIGH
+                    ignore-unfixed: true
+                    limit-severities-for-sarif: true
+                    format: sarif
+                    output: trivy-results.sarif
+                    exit-code: '0'
+            # Pull requests from Dependabot and forks receive a read-only token that cannot upload SARIF.
+            -
+                name: 📤 Upload to Code Scanning
+                if: hashFiles('docker/Dockerfile') != '' && github.event_name != 'pull_request'
+                uses: github/codeql-action/upload-sarif@v4.39.1
+                with:
+                    sarif_file: trivy-results.sarif
+                    category: container-image
+            -
+                name: 🚦 Vulnerability Gate
+                if: hashFiles('docker/Dockerfile') != ''
+                uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25  # v0.36.0
+                with:
+                    image-ref: ${{env.IMAGE}}
+                    scanners: vuln
+                    vuln-type: os,library
+                    severity: CRITICAL,HIGH
+                    ignore-unfixed: true
+                    format: table
+                    # Set to '0' to report findings without failing the run.
+                    exit-code: '1'
+
+...
+
+# -*- mode: yaml; indent: 4; fill-column: 120; coding: utf-8 -*-
